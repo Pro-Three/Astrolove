@@ -5,7 +5,7 @@ const Profile = () => {
         <div class="container">
             <div class="row">
 
-            <h3 class="center">New Build in React!!!!!!!!!!!</h3>
+            <h3 class="center">Your information here.</h3>
 
             </div>
         </div>

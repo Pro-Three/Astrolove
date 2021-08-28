@@ -1,6 +1,6 @@
 import React from 'react';
 
-const chats = () => {
+const Chats = () => {
     return (
         <div class="container">
             <div class="row">
@@ -12,4 +12,4 @@ const chats = () => {
     )
 }
 
-export default chats
+export default Chats
