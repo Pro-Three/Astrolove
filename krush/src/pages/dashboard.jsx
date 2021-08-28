@@ -1,6 +1,6 @@
 import React from 'react';
 
-const MainPage = () => {
+const Dashboard = () => {
     return (
         <div class="container">
             <div class="row">
@@ -12,4 +12,4 @@ const MainPage = () => {
     )
 }
 
-export default MainPage
+export default Dashboard

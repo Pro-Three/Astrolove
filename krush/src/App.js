@@ -4,9 +4,9 @@ import Navbar from './components/layout/Navbar';
 // import Tracks from './components/layout/Tracks';
 
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import MainPage from './pages/mainpage';
+import Dashboard from './pages/dashboard';
 import chats from './pages/chats';
-// import Life from './pages/Life';
+import Profile from './pages/profile';
 // import Sound from './pages/Sound';
 // import Design from './pages/Design';
 // import Company from './pages/Company';
@@ -18,8 +18,9 @@ function App() {
     <Navbar />
     {/* <Tracks />   */}
     <Switch>
-      <Route path="/" exact component={MainPage} />
+      <Route path="/" exact component={Dashboard} />
       <Route path="/chats" exact component={chats} />
+      <Route path="/profile" exact component={Profile} />
     </Switch>
     </div>
     </Router>
