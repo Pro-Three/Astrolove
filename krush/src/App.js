@@ -8,16 +8,18 @@ import Dashboard from './pages/dashboard';
 import chats from './pages/chats';
 import Profile from './pages/profile';
 import Matches from './pages/matches';
-// import Design from './pages/Design';
-// import Company from './pages/Company';
+// import Login from './pages/Login';
 
 function App() {
   return (
     <Router>
     <div>
     <Navbar />
-    {/* <Tracks />   */}
     <Switch>
+      {/* LOGIN */}
+      <Route path="/chats" exact component={chats} />
+
+      {/* LOGGED IN */}
       <Route path="/" exact component={Dashboard} />
       <Route path="/chats" exact component={chats} />
       <Route path="/profile" exact component={Profile} />
