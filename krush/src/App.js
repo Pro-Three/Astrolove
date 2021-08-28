@@ -1,11 +1,11 @@
 import './App.css';
-// import 'materialize-css';
-// import Navbar from './components/layout/Navbar';
+import 'materialize-css';
+import Navbar from './components/layout/navbar';
 // import Tracks from './components/layout/Tracks';
 
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import MainPage from './pages/mainpage';
-// import Contact from './pages/Contact';
+import chats from './pages/chats';
 // import Life from './pages/Life';
 // import Sound from './pages/Sound';
 // import Design from './pages/Design';
@@ -15,10 +15,11 @@ function App() {
   return (
     <Router>
     <div>
-    {/* <Navbar /> */}
+    <Navbar />
     {/* <Tracks />   */}
     <Switch>
       <Route path="/" exact component={MainPage} />
+      <Route path="/chats" exact component={chats} />
     </Switch>
     </div>
     </Router>

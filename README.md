@@ -7,3 +7,5 @@ Information Needed for DB - Sun Signs, Users, Email, Telephone, Permissions for 
 chat or blind meet
 
 success page - reviews
+
+danger page
