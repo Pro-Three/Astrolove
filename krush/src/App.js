@@ -7,7 +7,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Dashboard from './pages/dashboard';
 import chats from './pages/chats';
 import Profile from './pages/profile';
-// import Sound from './pages/Sound';
+import Matches from './pages/matches';
 // import Design from './pages/Design';
 // import Company from './pages/Company';
 
@@ -21,6 +21,7 @@ function App() {
       <Route path="/" exact component={Dashboard} />
       <Route path="/chats" exact component={chats} />
       <Route path="/profile" exact component={Profile} />
+      <Route path="/matches" exact component={Matches} />
     </Switch>
     </div>
     </Router>
