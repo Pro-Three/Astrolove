@@ -1,6 +1,6 @@
 import './App.css';
 import 'materialize-css';
-import Navbar from './components/layout/navbar';
+import Navbar from './components/layout/Navbar';
 // import Tracks from './components/layout/Tracks';
 
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
