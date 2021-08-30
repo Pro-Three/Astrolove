@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+
 // import $ from 'jquery';
 
 
@@ -18,11 +20,15 @@ const OnLoad = () => {
             <h3 className="center">Welcome Starchild</h3>
 
             <div className="col s12 m12 l12 center">
+            <Link to="/createaccount">
             <button type="button" className="newUse" id="newUse" onClick={newUse}>New User</button>
+            </Link>
             </div>
 
             <div className="col s12 m12 l12 center">
+            <Link to="/login">
             <button type="button" className="exUse" id="exUse" onClick={exUse}>Existing User</button>
+            </Link>
             </div>
             
             

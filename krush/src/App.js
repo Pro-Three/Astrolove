@@ -13,7 +13,7 @@ import Chats from './pages/chats';
 import Profile from './pages/profile';
 import Matches from './pages/matches';
 import OnLoad from './pages/onload';
-// import Login from './pages/Login';
+import Login from './pages/login';
 
 
 
@@ -26,7 +26,7 @@ function App() {
     <Switch>
       {/* LOGIN */}
       <Route path="/onload" exact component={OnLoad} />
-      {/* <Route path="/login" exact component={Login} /> */}
+      <Route path="/login" exact component={Login} />
 
       {/* LOGGED IN */}
       <Route path="/" exact component={Dashboard} />
