@@ -15,10 +15,14 @@ const CreateAccount = () => {
                 <input type="text" id="newFirstName"/><br/>
                 <label id="newLastLabel">Last Name:</label><br/>
                 <input type="text" id="newLastName"/><br/>
+                <label id="newLastLabel">Email:</label><br/>
+                <input type="text" id="newEmail"/><br/>
                 <label id="newUserLabel">Username:</label><br/>
                 <input type="text" id="newUserName"/><br/>
                 <label id="newPasswordLabel">Password:</label><br/>
                 <input type="text" id="newPassword"/><br/>
+                <label id="newSunSign">Sun Sign:</label><br/>
+                <input type="text" id="newSunSign"/><br/>
                 </form>
             </div>
 

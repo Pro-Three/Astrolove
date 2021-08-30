@@ -16,6 +16,7 @@ const Login = () => {
                 <label id="logPasswordLabel">Password</label><br/>
                 <input type="text" id="logPassword"/><br/>
                 </form>
+                <button className="button" id="loginButtz">Login</button>
             </div>
 
 
