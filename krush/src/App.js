@@ -7,7 +7,7 @@ import Navbar from './components/layout/Navbar';
 import Footer from './components/layout/Footer';
 // import Tracks from './components/layout/Tracks';
 
-// Pages
+// NavBar Pages
 import Dashboard from './pages/dashboard';
 import Chats from './pages/chats';
 import Profile from './pages/profile';
@@ -15,6 +15,10 @@ import Matches from './pages/matches';
 import OnLoad from './pages/onload';
 import CreateAccount from './pages/createaccount';
 import Login from './pages/login';
+import Logout from './pages/logout';
+
+// Footer Pages
+import AboutUs from './pages/aboutus';
 
 
 
@@ -25,6 +29,8 @@ function App() {
     <div>
     <Navbar />
     <Switch>
+      {/* NAVBAR */}
+
       {/* LOGIN */}
       <Route path="/onload" exact component={OnLoad} />
       <Route path="/login" exact component={Login} />
@@ -35,6 +41,13 @@ function App() {
       <Route path="/chats" exact component={Chats} />
       <Route path="/profile" exact component={Profile} />
       <Route path="/matches" exact component={Matches} />
+      <Route path="/logout" exact component={Logout} />
+
+      {/*  */}
+      {/*  */}
+
+      {/* Footer */}
+      <Route path="/aboutus" exact component={AboutUs} />
       
     </Switch>
     <Footer />
