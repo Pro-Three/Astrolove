@@ -2,10 +2,12 @@ import React from 'react';
 
 const Profile = () => {
     return (
-        <div class="container">
-            <div class="row">
+        <div className="container">
+            <div className="row #b0bec5 blue-grey lighten-3">
 
-            <h3 class="center">Your information here.</h3>
+            <h3 className="center">Your information here.</h3>
+
+            
 
             </div>
         </div>

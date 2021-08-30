@@ -1,3 +1,35 @@
 * {
   font-family: 'Crimson Text', serif;
 }
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+button {
+  width: 150px;
+  height: 25px;
+  color: white;
+  background-color: rgb(212, 26, 57);
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#logUserLabel, #logUserName, #logPasswordLabel, #logPassword {
+  color: white;
+  /* margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 10px; */
+  margin: 10px;
+}
+
+#logForm, {
+  /* background-color: rgb(212, 26, 57); */
+  border-radius: 20px;
+}
