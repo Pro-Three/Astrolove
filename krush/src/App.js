@@ -12,6 +12,7 @@ import Dashboard from './pages/dashboard';
 import Chats from './pages/chats';
 import Profile from './pages/profile';
 import Matches from './pages/matches';
+import OnLoad from './pages/onload';
 // import Login from './pages/Login';
 
 
@@ -22,7 +23,9 @@ function App() {
     <Navbar />
     <Switch>
       {/* LOGIN */}
+      <Route path="/onload" exact component={OnLoad} />
       {/* <Route path="/login" exact component={Login} /> */}
+
       {/* LOGGED IN */}
       <Route path="/" exact component={Dashboard} />
       <Route path="/chats" exact component={Chats} />
