@@ -13,6 +13,7 @@ import Chats from './pages/chats';
 import Profile from './pages/profile';
 import Matches from './pages/matches';
 import OnLoad from './pages/onload';
+import CreateAccount from './pages/createaccount';
 import Login from './pages/login';
 
 
@@ -27,6 +28,7 @@ function App() {
       {/* LOGIN */}
       <Route path="/onload" exact component={OnLoad} />
       <Route path="/login" exact component={Login} />
+      <Route path="/createaccount" exact component={CreateAccount} />
 
       {/* LOGGED IN */}
       <Route path="/" exact component={Dashboard} />
