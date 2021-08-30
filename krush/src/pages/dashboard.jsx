@@ -2,10 +2,10 @@ import React from 'react';
 
 const Dashboard = () => {
     return (
-        <div class="container">
-            <div class="row">
+        <div className="container">
+            <div className="row">
 
-            <h3 class="center">New Build in React!!!!!!!!!!!</h3>
+            <h3 className="center">New Build in React!!!!!!!!!!!</h3>
 
             </div>
         </div>

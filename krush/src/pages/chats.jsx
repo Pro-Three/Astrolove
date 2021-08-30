@@ -2,10 +2,10 @@ import React from 'react';
 
 const Chats = () => {
     return (
-        <div class="container">
-            <div class="row">
+        <div className="container">
+            <div className="row">
 
-            <h3 class="center">You talk here</h3>
+            <h3 className="center">You talk here</h3>
 
             </div>
         </div>
