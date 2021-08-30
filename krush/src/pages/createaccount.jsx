@@ -3,7 +3,7 @@ import React from 'react';
 const CreateAccount = () => {
     return (
         <div className="container">
-            <div className="row">
+            <div className="row #b0bec5 blue-grey lighten-3">
 
             <h3 className="col s12 m12 l12 center">Hello New Being of Light!!!</h3>
 
