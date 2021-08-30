@@ -1,6 +1,6 @@
 import './App.css';
 import 'materialize-css';
-import Navbar from './components/layout/Navbar';
+import Navbar from './components/layout/navbar';
 // import Tracks from './components/layout/Tracks';
 
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
@@ -8,7 +8,7 @@ import Dashboard from './pages/dashboard';
 import chats from './pages/chats';
 import Profile from './pages/profile';
 import Matches from './pages/matches';
-// import Login from './pages/Login';
+import Login from './pages/login';
 
 function App() {
   return (
@@ -17,7 +17,7 @@ function App() {
     <Navbar />
     <Switch>
       {/* LOGIN */}
-      <Route path="/chats" exact component={chats} />
+      <Route path="/login" exact component={Login} />
 
       {/* LOGGED IN */}
       <Route path="/" exact component={Dashboard} />
