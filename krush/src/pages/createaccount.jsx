@@ -25,7 +25,9 @@ const CreateAccount = () => {
                 <input type="text" id="newSunSign"/><br/>
                 </form>
             </div>
-
+            <div className="center">
+            <button className="createAccount" id="createAccount">Begin Journey</button>
+            </div>
             </div>
         </div>
     )

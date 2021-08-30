@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Matches = () => {
+const OnLook = () => {
     return (
         <div className="container">
             <div className="row #b0bec5 blue-grey lighten-3">
@@ -14,10 +14,10 @@ const Matches = () => {
                     <h5>Match Score</h5>
                 </div>
 
-                <div className="col s12 m12 l12">
-                    <button className="sendGoodVibes" id="sendGoodVibes">Send Good Vibes</button><br/>
-                    <button className="swipeLike" id="swipeLike">Swipe Like</button><br/>
-                    <button className="continueJourney" id="continueJourney">Continue the Journey</button><br/>
+                <div className="col s12 m12 l12 center">
+                    <button className="swipeLike" id="swipeLike">Swipe Like</button>
+                    <button className="sendGoodVibes" id="sendGoodVibes">Send Good Vibes</button>
+                    <button className="continueJourney" id="continueJourney">Continue the Journey</button>
                 </div> 
 
             </div>
@@ -25,4 +25,4 @@ const Matches = () => {
     )
 }
 
-export default Matches
+export default OnLook
