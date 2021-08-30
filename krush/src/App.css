@@ -11,3 +11,12 @@ body {
 main {
   flex: 1 0 auto;
 }
+
+.newUse, .exUse {
+  width: 150px;
+  height: 25px;
+  color: white;
+  background-color: rgb(212, 26, 57);
+  margin-top: 10px;
+  margin-bottom: 10px;
+}

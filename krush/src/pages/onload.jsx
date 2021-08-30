@@ -4,8 +4,12 @@ import React from 'react';
 
 const OnLoad = () => {
 
-    const buttonClicked = () => { 
-        console.log('Button was clicked!');
+    const newUse = () => { 
+        console.log('loginClicked!');
+    };
+
+    const exUse = () => { 
+        console.log('newClicked!');
     };
     
     return (
@@ -13,8 +17,15 @@ const OnLoad = () => {
             <div className="row">
             <h3 className="center">Welcome Starchild</h3>
 
-            <button type="button" className="login" id="login" onClick={buttonClicked}>Login</button>
-            <button type="button" className="newAccount" id="newAccount">Sign Up</button>
+            <div className="col s12 m12 l12 center">
+            <button type="button" className="newUse" id="newUse" onClick={newUse}>New User</button>
+            </div>
+
+            <div className="col s12 m12 l12 center">
+            <button type="button" className="exUse" id="exUse" onClick={exUse}>Existing User</button>
+            </div>
+            
+            
 
             </div>
         </div>
