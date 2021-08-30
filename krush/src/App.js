@@ -1,17 +1,19 @@
 import './App.css';
 import 'materialize-css';
+
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 // Components
 import Navbar from './components/layout/Navbar';
 import Footer from './components/layout/Footer';
-// import Tracks from './components/layout/Tracks';
+
 
 // NavBar Pages
 import Dashboard from './pages/dashboard';
 import Chats from './pages/chats';
 import Profile from './pages/profile';
 import Matches from './pages/matches';
+
 import OnLoad from './pages/onload';
 import CreateAccount from './pages/createaccount';
 import Login from './pages/login';
@@ -21,8 +23,6 @@ import OnLook from './pages/onlook'
 // Footer Pages
 import AboutUs from './pages/aboutus';
 import Contact from './pages/contactus';
-
-
 
 
 function App() {
@@ -37,6 +37,7 @@ function App() {
       <Route path="/onload" exact component={OnLoad} />
       <Route path="/login" exact component={Login} />
       <Route path="/createaccount" exact component={CreateAccount} />
+
 
       {/* LOGGED IN */}
       <Route path="/" exact component={Dashboard} />

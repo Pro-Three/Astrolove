@@ -5,8 +5,9 @@ const Login = () => {
         <div className="container">
             <div className="row #b0bec5 blue-grey lighten-3">
 
-            <h3 className="center">Welcome Back!</h3>
-
+            <h3 className="center">Welcome Back to Astrolove</h3>
+            <h4 className="center">The newest and hottest dating site!</h4>
+            <br/>
             <h5 className="center">Please see the login form to continue your soulmatch journey!</h5>
 
             <div className="col s12 m12 l12"  id="logForm">
@@ -22,6 +23,7 @@ const Login = () => {
             <button className="loginBtn" id="loginBtn">Login</button>
             </div>
             
+
 
             </div>
         </div>
