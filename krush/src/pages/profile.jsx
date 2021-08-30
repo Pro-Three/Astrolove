@@ -7,6 +7,8 @@ const Profile = () => {
 
             <h3 class="center">Your information here.</h3>
 
+            
+
             </div>
         </div>
     )

@@ -15,3 +15,7 @@ const OnLoad = () => {
 }
 
 export default OnLoad
+
+$("#login").onclick(function(){
+    alert("The paragraph was clicked.");
+  });
