@@ -15,6 +15,7 @@ const Navbar = () => {
                 <li><a href="/login">Login</a></li>
                 <li><a href="/createaccount">Create</a></li>
                 {/* AFTER LOGIN */}
+                <li><a href="/onlook">OnLook</a></li>
                 <li><a href="/chats">Chats</a></li>
                 <li><a href="/profile">Profile</a></li>
                 <li><a href="/matches">Matches</a></li>

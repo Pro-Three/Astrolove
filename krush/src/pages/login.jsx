@@ -19,7 +19,7 @@ const Login = () => {
             </div>
 
             <div className="logButtzDiv col s12 m12 l12 center" id="logButtsDiv">
-            <button className="loginButtz" id="loginButtz">Login</button>
+            <button className="loginBtn" id="loginBtn">Login</button>
             </div>
             
 

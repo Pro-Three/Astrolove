@@ -16,9 +16,11 @@ import OnLoad from './pages/onload';
 import CreateAccount from './pages/createaccount';
 import Login from './pages/login';
 import Logout from './pages/logout';
+import OnLook from './pages/onlook'
 
 // Footer Pages
 import AboutUs from './pages/aboutus';
+import Contact from './pages/contactus';
 
 
 
@@ -40,6 +42,7 @@ function App() {
       <Route path="/" exact component={Dashboard} />
       <Route path="/chats" exact component={Chats} />
       <Route path="/profile" exact component={Profile} />
+      <Route path="/onlook" exact component={OnLook} />
       <Route path="/matches" exact component={Matches} />
       <Route path="/logout" exact component={Logout} />
 
@@ -48,6 +51,7 @@ function App() {
 
       {/* Footer */}
       <Route path="/aboutus" exact component={AboutUs} />
+      <Route path="/contact" exact component={Contact} />
       
     </Switch>
     <Footer />
