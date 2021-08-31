@@ -1,11 +1,20 @@
 import React from 'react';
 import 'materialize-css';
 
+const styles = {
+footer: {
+    position: 'absolute',
+    left:0,
+    bottom:0,
+    right:0,
+}
+
+}
 
 const Footer = () => {
     return (
         <div>
-            <footer class="page-footer #000000 black">
+            <footer class="page-footer #000000 black" style= {styles.footer}>
                 <div class="container">
                     <div class="row">
                     <div class="col l6 s12">
