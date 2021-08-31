@@ -1,15 +1,15 @@
 import React from 'react';
 
-const Chats = () => {
+const Contact = () => {
     return (
         <div className="container">
             <div className="row #b0bec5 blue-grey lighten-3">
 
-            <h3 className="center">You talk here</h3>
+            <h3 className="center">You Don't</h3>
 
             </div>
         </div>
     )
 }
 
-export default Chats
+export default Contact
