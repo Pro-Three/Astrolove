@@ -2,6 +2,7 @@ import './App.css';
 import 'materialize-css';
 
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+// import { ApolloProvider } from '@apollo/client';
 
 // Components
 import Navbar from './components/layout/navbar';
@@ -27,6 +28,7 @@ import Contact from './pages/contactus';
 
 function App() {
   return (
+    // <ApolloProvider>
     <Router>
     <div>
     <Navbar />
@@ -58,6 +60,7 @@ function App() {
     <Footer />
     </div>
     </Router>
+    // </ApolloProvider>
   );
 }
 
