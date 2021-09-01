@@ -19,7 +19,7 @@ const Login = () => {
                 </form>
             </div>
 
-            <div className="logButtzDiv col s12 m12 l12 center" id="logButtsDiv">
+            <div className="logButtzDiv col s12 m12 l12 center" id="logBtnDiv">
             <button className="loginBtn" id="loginBtn">Login</button>
             </div>
             

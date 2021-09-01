@@ -4,7 +4,7 @@ import 'materialize-css';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 // Components
-import Navbar from './components/layout/Navbar';
+import Navbar from './components/layout/navbar';
 import Footer from './components/layout/Footer';
 
 
