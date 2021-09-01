@@ -34,3 +34,7 @@ button {
   /* background-color: rgb(212, 26, 57); */
   border-radius: 20px;
 }
+
+.page-footer {
+  max-height: 100vh;
+}
