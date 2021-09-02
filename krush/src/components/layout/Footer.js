@@ -31,7 +31,7 @@ const Footer = () => {
                     </div>
                 </div>
                 <div class="footer-copyright">
-                    <div class="container">
+                    <div className="container">
                     © 2021 Copyright Of All Times
                     <a class="grey-text text-lighten-4 right" href="/">More Links</a>
                     </div>
