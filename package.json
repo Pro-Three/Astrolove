@@ -7,7 +7,7 @@
     "start": "cd server && npm start",
     "develop": "concurrently \"cd server && npm run watch\" \"cd krush && npm start\"",
     "build": "cd krush && npm run build",
-    "install": "cd server && npm i && cd ../krush && npm i",
+    "install": "concurrently \"cd server && npm i\" \"cd krush && npm i\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
