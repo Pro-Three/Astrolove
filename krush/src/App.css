@@ -1,40 +1,43 @@
 * {
-  font-family: 'Crimson Text', serif;
-}
-
-body {
-  display: flex;
-  min-height: 100vh;
-  flex-direction: column;
-  background-color: ;
-}
-
-main {
-  flex: 1 0 auto;
-}
-
-button {
-  width: 150px;
-  height: 25px;
-  color: white;
-  background-color: rgb(212, 26, 57);
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-
-#logUserLabel, #logUserName, #logPasswordLabel, #logPassword {
-  color: white;
-  /* margin-top: 10px;
-  margin-bottom: 10px;
-  margin-left: 10px; */
-  margin: 10px;
-}
-
-#logForm, {
-  /* background-color: rgb(212, 26, 57); */
-  border-radius: 20px;
-}
-
-.page-footer {
-  max-height: 100vh;
-}
+  font-family: "Sofia", sans-serif;
+  
+ }
+ 
+ body {
+   display: flex;
+   min-height: 100vh;
+   flex-direction: column;
+   background: -moz-linear-gradient(-45deg, #f7d088 0%, #e866df 100%);
+   background: -webkit-linear-gradient(-45deg, #f7d088 0%,#e866df 100%); 
+   background: linear-gradient(135deg, #f7d088 0%,#e866df 100%); 
+ }
+ 
+ main {
+   flex: 1 0 auto;
+ }
+ 
+ button {
+   width: 150px;
+   height: 25px;
+   color: white;
+   background-color: rgb(212, 26, 57);
+   margin-top: 10px;
+   margin-bottom: 10px;
+ }
+ 
+ #logUserLabel, #logUserName, #logPasswordLabel, #logPassword {
+   color: white;
+   /* margin-top: 10px;
+   margin-bottom: 10px;
+   margin-left: 10px; */
+   margin: 10px;
+ }
+ 
+ #logForm, {
+   /* background-color: rgb(212, 26, 57); */
+   border-radius: 20px;
+ }
+ 
+ .page-footer {
+   max-height: 100vh;
+ }
