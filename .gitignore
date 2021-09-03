@@ -102,3 +102,8 @@ dist
 
 # TernJS port file
 .tern-port
+
+# Package Lock
+package-lock.json
+krush/package-lock.json
+server/package-lock.json
