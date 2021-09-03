@@ -31,11 +31,8 @@ const Footer = () => {
                     </div>
                     </div>
                 </div>
-<<<<<<< HEAD
                 <div className="footer-copyright">
-=======
-                <div class="footer-copyright">
->>>>>>> 9206c6a8b154c28081099e1ee965d869e82af205
+
                     <div className="container">
                     © 2021 Copyright Of All Times
                     <a className="grey-text text-lighten-4 right" href="/">More Links</a>
