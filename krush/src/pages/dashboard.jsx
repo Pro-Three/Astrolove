@@ -27,7 +27,7 @@ const Dashboard = () => {
             <h3 className="col s12 m12 l12">Dashboard</h3>
             
             <div className="col s12 m12 l12">
-            <Link to='/matches'>
+            <Link to='/onlook'>
             <button className="newMatchesBtn right" id="newMatchesBtn">Find New Matches</button>
             </Link>
             </div>
