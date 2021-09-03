@@ -10,6 +10,8 @@ function Login(props) {
 
   const handleFormSubmit = async (event) => {
     event.preventDefault();
+    console.log('EMAIL:  ', formState.email)
+    console.log(`PASSWORD:  `, formState.password)
     try {
       const mutationResponse = await login({
         variables: { email: formState.email, password: formState.password },
@@ -68,6 +70,7 @@ function Login(props) {
                   <label for="email">Email</label>
                   <input
                     placeholder="youremail@domain.com"
+                    name="email"
                     type="email"
                     id="email"
                     className="validate"
@@ -81,6 +84,7 @@ function Login(props) {
                   <label for="email">Password</label>
                   <input
                     placeholder="••••••"
+                    name="password"
                     type="password"
                     id="password"
                     className="validate"
@@ -103,11 +107,12 @@ function Login(props) {
                 <i className="material-icons right">{/*verified_user*/}</i>
                 </button>
               </div>
+              <Link to="/createaccount">← Create a new account</Link>
             </form>
           </div>
         </div>
       </div>
-      <Link to="/createaccount">← Create a new account</Link>
+      
     </div>
   );
 }
