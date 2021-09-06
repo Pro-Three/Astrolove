@@ -6,10 +6,10 @@ const Navbar = () => {
     return (
         <div>
         <nav>
-            <div class="nav-wrapper #e91e63 pink">
-            <a href="/" class="brand-logo">AstroLove</a>
+            <div className="nav-wrapper #ff6f00 amber darken-4 z-depth-3">
+            <a href="/" className="brand-logo center">AstroLove</a>
             
-            <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <ul id="nav-mobile" className="right hide-on-med-and-down">
                 {/* PRE-LOGIN...? */}
                 <li><a href="/onload">Onload</a></li>
                 <li><a href="/login">Login</a></li>

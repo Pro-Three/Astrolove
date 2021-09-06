@@ -31,58 +31,58 @@ const CreateAccount = () => {
         //     </div>
         // </div>
 
-<div class="row">
-  <div class="col s12 l4 offset-l4">
-    <div class="card grey lighten-3">
-      <div class="card-content">
-        <h4 class="card-title center-align">Create Account</h4>
+<div className="row">
+  <div className="col s12 l4 offset-l4">
+    <div className="card grey lighten-3">
+      <div className="card-content">
+        <h4 className="card-title center-align">Create Account</h4>
         <form>
-          <div class="row">
-            <div class="input-field col s12">
-              <i class="material-icons prefix">accessibility</i>
-              <input type="text" id="first_name" class="validate" />
+          <div className="row">
+            <div className="input-field col s12">
+              <i className="material-icons prefix">accessibility</i>
+              <input type="text" id="first_name" className="validate" />
               <label for="first_name">First Name</label>
             </div>
           </div>
-          <div class="row">
-            <div class="input-field col s12">
-              <i class="material-icons prefix">people</i>
-              <input type="text" id="last_name" class="validate" />
+          <div className="row">
+            <div className="input-field col s12">
+              <i className="material-icons prefix">people</i>
+              <input type="text" id="last_name" className="validate" />
               <label for="last_name">Last Name</label>
             </div>
           </div>
-          <div class="row">
-            <div class="input-field col s12">
-              <i class="material-icons prefix">email</i>
-              <input type="email" id="email" class="validate" />
+          <div className="row">
+            <div className="input-field col s12">
+              <i className="material-icons prefix">email</i>
+              <input type="email" id="email" className="validate" />
               <label for="email" data-error="wrong" data-success="right">Email</label>
-              {/* <span class="helper-text" data-error="wrong" data-success="right">Helper text</span> */}
+              {/* <span className="helper-text" data-error="wrong" data-success="right">Helper text</span> */}
             </div>
           </div>
-          <div class="row">
-            <div class="input-field col s12">
-              <i class="material-icons prefix">public</i>
-              <input type="text" id="user_name" class="validate" />
+          <div className="row">
+            <div className="input-field col s12">
+              <i className="material-icons prefix">public</i>
+              <input type="text" id="user_name" className="validate" />
               <label for="user_name">Username</label>
             </div>
           </div>
-          <div class="row">
-            <div class="input-field col s12">
-              <i class="material-icons prefix">vpn_key</i>
-              <input type="password" id="password" class="validate" />
+          <div className="row">
+            <div className="input-field col s12">
+              <i className="material-icons prefix">vpn_key</i>
+              <input type="password" id="password" className="validate" />
               <label for="password">Password</label>
             </div>
           </div>
-          <div class="row">
-            <div class="input-field col s12">
-              <i class="material-icons prefix">brightness_medium</i>
-              <input type="text" id="sun_sign" class="validate" />
+          <div className="row">
+            <div className="input-field col s12">
+              <i className="material-icons prefix">brightness_medium</i>
+              <input type="text" id="sun_sign" className="validate" />
               <label for="sun_sign">Sun Sign</label>
             </div>
           </div>
-          <div class="row center-align">
-            <button class="waves-effect waves-light btn deep-purple lighten-1 btn-medium" type="submit" name="action">Submit
-              <i class="material-icons right">assignment_ind</i>
+          <div className="row center-align">
+            <button className="waves-effect waves-light btn deep-purple lighten-1 btn-medium" type="submit" name="action">Submit
+              <i className="material-icons right">assignment_ind</i>
             </button>
           </div>
         </form>

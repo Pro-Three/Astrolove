@@ -50,7 +50,7 @@ const Footer = () => {
 
 	        <footer style= {styles.footer}>
 		        <nav> 
-			        <div className="nav-wrapper #e91e63 pink">
+			        <div className="nav-wrapper ##ff6f00 amber darken-4">
 				        <ul className="right">
                           <li><a href="/aboutus">About Us</a></li>
                           <li><a href="/contact">Contact Us</a></li>
