@@ -6,7 +6,12 @@ const typeDefs = gql`
     username: String
     email: String
     password: String
-    sunSign: String
+    firstName: String
+    lastName: String
+    signSun: String
+    gender: String
+    desiredRelationshipType: String
+    desiredRelationshipPref: String
   }
 
   type Auth {
