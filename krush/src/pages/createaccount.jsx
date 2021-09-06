@@ -1,4 +1,16 @@
 import React from 'react';
+import Select from "materialize-css";
+
+
+// function componentDidMount() {
+//     // Auto initialize all the things!
+//   Select.AutoInit()
+// }
+
+document.addEventListener('DOMContentLoaded', function() {
+  var elems = document.querySelectorAll('select');
+  var instances = Select.FormSelect.init(elems);
+});
 
 const CreateAccount = () => {
     return (
@@ -73,11 +85,61 @@ const CreateAccount = () => {
               <label for="password">Password</label>
             </div>
           </div>
-          <div class="row">
-            <div class="input-field col s12">
-              <i class="material-icons prefix">brightness_medium</i>
-              <input type="text" id="sun_sign" class="validate" />
-              <label for="sun_sign">Sun Sign</label>
+          <div className="row">
+            <div className="input-field col s12">
+              <i className="material-icons prefix select-dropdown">radio_button_unchecked</i>
+              <select>
+                <option value="0"></option>
+                <option defaultValue="99">Unspecified</option>
+                <option value="1">Male</option>
+                <option value="2">Female</option>
+                <option value="3">Bigender</option>
+                <option value="4">Agender</option>
+                <option value="5">Androgyne</option>
+                <option value="6">Genderqueer</option>
+                <option value="7">Third</option>
+                <option value="8">Fourth</option>
+                <option value="9">Fluid</option>
+                <option value="14">Questioning</option>
+                <option value="15">Other</option>
+              </select>
+              <label for="gender">Gender</label>
+            </div>
+          </div>
+          <div className="row">
+            <div className="input-field col s12">
+              <i className="material-icons prefix select-dropdown">brightness_medium</i>
+              {/*<input type="text" id="sun_sign" class="validate" />*/}
+              <select>
+                <option defaultValue="0"></option>
+                <option value="1">Aquarius</option>
+                <option value="2">Pisces</option>
+                <option value="3">Aries</option>
+                <option value="4">Taurus</option>
+                <option value="5">Gemini</option>
+                <option value="6">Cancer</option>
+                <option value="7">Leo</option>
+                <option value="8">Virgo</option>
+                <option value="9">Libra</option>
+                <option value="10">Scorpio</option>
+                <option value="11">Sagittarius</option>
+                <option value="12">Capricorn</option>
+              </select>
+              <label for="signSun">Sun Sign</label>
+            </div>
+          </div>
+          <div className="row">
+            <div className="input-field col s12">
+              <i className="material-icons prefix select-dropdown">brightness_medium</i>
+              {/*<input type="text" id="sun_sign" class="validate" />*/}
+              <select>
+                <option defaultValue="0"></option>
+                <option value="1">Just friends</option>
+                <option value="2">Open to dating</option>
+                <option value="3">Friends with benefits</option>
+                <option value="4">Not interested in a relationship</option>
+              </select>
+              <label for="desiredRelationshipPreference">Desired Relationship Preference</label>
             </div>
           </div>
           <div class="row center-align">
