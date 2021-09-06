@@ -4,6 +4,18 @@ import { Link } from 'react-router-dom';
 // import $ from 'jquery';
 
 
+const styles = {
+    button: {
+        width: '150px',
+        height: '35px',
+        color: 'white',
+        marginTop: '10px',
+        marginBottom: '10px',
+        padding: "auto"
+    }
+}
+
+
 const OnLoad = () => {
 
     const newUse = () => { 
@@ -21,13 +33,13 @@ const OnLoad = () => {
 
             <div className="col s12 m12 l12 center">
             <Link to="/createaccount">
-            <button type="button" className="newUse" id="newUse" onClick={newUse}>New User</button>
+            <button type="button" style= {styles.button} className="newUse waves-effect waves-light btn deep-purple lighten-1 btn-medium" id="newUse" onClick={newUse}>New User</button>
             </Link>
             </div>
 
             <div className="col s12 m12 l12 center">
             <Link to="/login">
-            <button type="button" className="exUse" id="exUse" onClick={exUse}>Existing User</button>
+            <button type="button" style= {styles.button} className="exUse waves-effect waves-light btn deep-purple lighten-1 btn-medium" id="exUse" onClick={exUse}>Existing User</button>
             </Link>
             </div>
             
