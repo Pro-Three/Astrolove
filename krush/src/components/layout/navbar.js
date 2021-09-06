@@ -6,7 +6,7 @@ const Navbar = () => {
     return (
         <div>
         <nav>
-            <div class="nav-wrapper #000000 black">
+            <div class="nav-wrapper #e91e63 pink">
             <a href="/" class="brand-logo">AstroLove</a>
             
             <ul id="nav-mobile" class="right hide-on-med-and-down">
