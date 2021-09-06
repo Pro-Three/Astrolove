@@ -3,7 +3,7 @@ import React from 'react';
 const OnLook = () => {
     return (
         <div className="container">
-            <div className="row #b0bec5 blue-grey lighten-3">
+            <div className="row grey lighten-3">
                 <h3>SUCCESSFUL MATCH!!!</h3>
 
                 <div className="col s12 m9 l9">Picture</div> 

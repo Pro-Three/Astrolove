@@ -22,7 +22,7 @@ const Dashboard = () => {
 
     return (
         <div className="container">
-            <div className="row #b0bec5 blue-grey lighten-3">
+            <div className="row grey lighten-3">
 
             <h3 className="col s12 m12 l12">Dashboard</h3>
             
