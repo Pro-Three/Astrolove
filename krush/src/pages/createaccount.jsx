@@ -33,32 +33,6 @@ const CreateAccount = () => {
     Auth.login(token);
   };
 
-<<<<<<< HEAD
-<div className="row">
-  <div className="col s12 l4 offset-l4">
-    <div className="card grey lighten-3">
-      <div className="card-content">
-        <h4 className="card-title center-align">Create Account</h4>
-        <form>
-          <div className="row">
-            <div className="input-field col s12">
-              <i className="material-icons prefix">accessibility</i>
-              <input type="text" id="first_name" className="validate" />
-              <label for="first_name">First Name</label>
-            </div>
-          </div>
-          <div className="row">
-            <div className="input-field col s12">
-              <i className="material-icons prefix">people</i>
-              <input type="text" id="last_name" className="validate" />
-              <label for="last_name">Last Name</label>
-            </div>
-          </div>
-          <div className="row">
-            <div className="input-field col s12">
-              <i className="material-icons prefix">email</i>
-              <input type="email" id="email" className="validate" />
-=======
   const handleChange = (event) => {
     const { name, value } = event.target;
     setFormState({
@@ -108,7 +82,6 @@ const CreateAccount = () => {
                 className="validate"
                 onChange={handleChange}
               />
->>>>>>> bef36aa3cb050750a4aeb985052964a58bde41b0
               <label for="email" data-error="wrong" data-success="right">Email</label>
               {/* <span className="helper-text" data-error="wrong" data-success="right">Helper text</span> */}
             </div>
@@ -116,10 +89,6 @@ const CreateAccount = () => {
           <div className="row">
             <div className="input-field col s12">
               <i className="material-icons prefix">public</i>
-<<<<<<< HEAD
-              <input type="text" id="user_name" className="validate" />
-              <label for="user_name">Username</label>
-=======
               <input
                 name="username"
                 type="text"
@@ -128,15 +97,11 @@ const CreateAccount = () => {
                 onChange={handleChange}
               />
               <label for="username">Display Name</label>
->>>>>>> bef36aa3cb050750a4aeb985052964a58bde41b0
             </div>
           </div>
           <div className="row">
             <div className="input-field col s12">
               <i className="material-icons prefix">vpn_key</i>
-<<<<<<< HEAD
-              <input type="password" id="password" className="validate" />
-=======
               <input
                 name="password"
                 type="password"
@@ -144,17 +109,11 @@ const CreateAccount = () => {
                 className="validate"
                 onChange={handleChange}
               />
->>>>>>> bef36aa3cb050750a4aeb985052964a58bde41b0
               <label for="password">Password</label>
             </div>
           </div>
           <div className="row">
             <div className="input-field col s12">
-<<<<<<< HEAD
-              <i className="material-icons prefix">brightness_medium</i>
-              <input type="text" id="sun_sign" className="validate" />
-              <label for="sun_sign">Sun Sign</label>
-=======
               <i className="material-icons prefix select-dropdown">radio_button_unchecked</i>
               <select
                 name="gender"
@@ -220,7 +179,6 @@ const CreateAccount = () => {
                 <option>Not interested in a relationship</option>
               </select>
               <label for="desiredRelationshipPreference">Desired Relationship Preference</label>
->>>>>>> bef36aa3cb050750a4aeb985052964a58bde41b0
             </div>
           </div>
           <div className="row center-align">
