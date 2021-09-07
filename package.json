@@ -8,6 +8,7 @@
     "develop": "concurrently \"cd server && npm run watch\" \"cd krush && npm start\"",
     "build": "cd krush && npm run build",
     "install": "concurrently \"cd server && npm i\" \"cd krush && npm i\"",
+    "seed": "cd server && npm run seed",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

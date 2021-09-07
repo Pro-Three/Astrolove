@@ -18,19 +18,19 @@ const userSchema = new Schema({
   password: {
     type: String,
     required: true,
-    minlength: 5,
+    minlength: 6,
   },
-  first_name: {
+  firstName: {
     type: String,
     required: false,
     minLength: 1,
   },
-  last_name: {
+  lastName: {
     type: String,
     required: true,
     minLength: 1,
   },
-  sign_sun: {
+  signSun: {
     type: String,
     required: true,
     // instead of enum maybe validate for these values? --> enum: ['Capricorn', 'Aquarius', 'Pisces', 'Aries', 'Taurus', 'Gemini', 'Cancer', 'Leo', 'Virgo', 'Libra', 'Scorpio', 'Sagittarius']
@@ -40,13 +40,8 @@ const userSchema = new Schema({
     required: true,
     // enum: ["woman", "man", "non-binary", "transgender", "intersex", "Two Spirit", "gender non-conforming", "Other"]
   },
-  desired_relationship_type: {
+  desiredRelationshipPref: {
     type: String,
-    required: false,
-    // enum: ['Friendship', 'Romantic', 'Open to anything']
-  },
-  desired_relationship_pref: {
-    type: Array,
     required: false,
     // enum: ["woman", "man", "non-binary", "transgender", "intersex", "Two Spirit", "gender non-conforming", "Other"]
   },
