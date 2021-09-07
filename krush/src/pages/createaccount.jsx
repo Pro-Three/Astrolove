@@ -1,6 +1,10 @@
 import React from 'react';
 
 const CreateAccount = () => {
+    const Data = () => {
+        
+        localStorage.setItem("sun-sign", 'sun_sign.value')
+    }
     return (
         // <div className="container">
         //     <div className="row #b0bec5 blue-grey lighten-3">
@@ -81,7 +85,7 @@ const CreateAccount = () => {
             </div>
           </div>
           <div class="row center-align">
-            <button class="waves-effect waves-light btn deep-purple lighten-1 btn-medium" type="submit" name="action">Submit
+            <button class="waves-effect waves-light btn deep-purple lighten-1 btn-medium" type="submit" name="action" onClick={Data}>Submit
               <i class="material-icons right">assignment_ind</i>
             </button>
           </div>
@@ -91,6 +95,6 @@ const CreateAccount = () => {
   </div>
 </div>
     )
-}
+};
 
 export default CreateAccount

@@ -2,10 +2,11 @@ import React from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom'
 
+
 const options = {
   method: 'POST',
   url: 'https://sameer-kumar-aztro-v1.p.rapidapi.com/',
-  params: {sign: 'capricorn', day: 'today'},
+  params: {sign: 'capricorn' , day: 'today'},
   headers: {
     'x-rapidapi-host': 'sameer-kumar-aztro-v1.p.rapidapi.com',
     'x-rapidapi-key': process.env.REACT_APP_RAPID_API_KEY
