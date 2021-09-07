@@ -138,7 +138,8 @@ db.once('open', async () => {
       password: '!QAZ1qaz',
       signSun: 'Pisces',
       gender: 'Male',
-      desiredRelationshipPref: 'Just friends'
+      desiredRelationshipPref: 'Just friends',
+      aboutMe: 'I\'m a Pisces who likes to party!  Looking to the stars for a strong Capricorn or Taurus to have fun with!'
   });
 
   await User.create({
@@ -149,7 +150,8 @@ db.once('open', async () => {
     password: '!QAZ1qaz',
     signSun: 'Capricorn',
     gender: 'Genderqueer',
-    desiredRelationshipPref: 'Open to dating'
+    desiredRelationshipPref: 'Open to dating',
+    aboutMe: 'Living, loving, laughing, 100% Capricorn.  I get along with all signs, JUST NO FBOI\'S!'
 });
 
   console.log('Users have been seeded');

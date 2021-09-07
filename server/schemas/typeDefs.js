@@ -11,6 +11,7 @@ const typeDefs = gql`
     signSun: String
     gender: String
     desiredRelationshipPref: String
+    aboutMe: String
   }
 
   type Auth {
@@ -33,7 +34,8 @@ const typeDefs = gql`
       firstName: String,
       lastName: String!,
       gender: String!,
-      desiredRelationshipPref: String
+      desiredRelationshipPref: String,
+      aboutMe: String
     ): Auth
     updateUser(firstName: String, lastName: String, email: String, password: String): User
     login(email: String!, password: String!): Auth
