@@ -10,7 +10,6 @@ const typeDefs = gql`
     lastName: String
     signSun: String
     gender: String
-    desiredRelationshipType: String
     desiredRelationshipPref: String
   }
 
@@ -34,7 +33,6 @@ const typeDefs = gql`
       firstName: String,
       lastName: String!,
       gender: String!,
-      desiredRelationshipType: String,
       desiredRelationshipPref: String
     ): Auth
     updateUser(firstName: String, lastName: String, email: String, password: String): User

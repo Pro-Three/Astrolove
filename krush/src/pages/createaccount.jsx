@@ -186,6 +186,7 @@ const CreateAccount = () => {
               <i class="material-icons right">assignment_ind</i>
             </button>
           </div>
+          <Link to="/login">← Go to Login</Link>
         </form>
       </div>
     </div>
