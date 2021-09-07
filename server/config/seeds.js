@@ -149,7 +149,6 @@ db.once('open', async () => {
     password: '!QAZ1qaz',
     signSun: 'Capricorn',
     gender: 'Genderqueer',
-    desiredRelationshipType: '',
     desiredRelationshipPref: 'Open to dating'
 });
 
