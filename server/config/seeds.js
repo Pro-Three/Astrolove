@@ -137,9 +137,8 @@ db.once('open', async () => {
       email: 'dougdoug@yahoo.com',
       password: '!QAZ1qaz',
       signSun: 'Pisces',
-      gender: 'man',
-      desiredRelationshipType: '',
-      desiredRelationshipPref: ['Friendship']
+      gender: 'Male',
+      desiredRelationshipPref: 'Just friends'
   });
 
   await User.create({
@@ -149,9 +148,8 @@ db.once('open', async () => {
     email: 'courtcourt@yahoo.com',
     password: '!QAZ1qaz',
     signSun: 'Capricorn',
-    gender: 'woman',
-    desiredRelationshipType: '',
-    desiredRelationshipPref: ['Friendship', 'Dating']
+    gender: 'Genderqueer',
+    desiredRelationshipPref: 'Open to dating'
 });
 
   console.log('Users have been seeded');
