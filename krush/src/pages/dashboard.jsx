@@ -12,6 +12,17 @@ const options = {
   }
 };
 
+const styles = {
+  button: {
+      width: '150px',
+      height: '35px',
+      color: 'white',
+      marginTop: '5px',
+      marginBottom: '5px',
+      padding: "auto"
+  }
+}
+
 const Dashboard = () => {
     const Daily = () =>axios.request(options).then(function (response) {
       
@@ -28,14 +39,14 @@ const Dashboard = () => {
             
             <div className="col s12 m12 l12">
             <Link to='/onlook'>
-            <button className="newMatchesBtn right" id="newMatchesBtn">Find New Matches</button>
+            <button style= {styles.button} className="newMatchesBtn right waves-effect waves-light btn deep-purple lighten-1 btn-medium" id="newMatchesBtn">Find New Matches</button>
             </Link>
             </div>
             <div className="col s12 m12 l12">
-            <button className="dailyScope right" id="dailyScope" onClick={Daily}>Daily Horoscope</button>
+            <button style= {styles.button} className="dailyScope right waves-effect waves-light btn deep-purple lighten-1 btn-medium" id="dailyScope" onClick={Daily}>Daily Horoscope</button>
             </div>
             <div className="col s12 m12 l12">
-            <button className="monthlyScope right" id="monthlyScope">Monthly</button>
+            <button style= {styles.button} className="monthlyScope right waves-effect waves-light btn deep-purple lighten-1 btn-medium" id="monthlyScope">Monthly</button>
             </div>
             </div>
         </div>

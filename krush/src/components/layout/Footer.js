@@ -1,23 +1,14 @@
 import React from 'react';
 import 'materialize-css';
-
+import { FaGithub} from "react-icons/fa";
 
 const styles = {
 footer: {
-    // position: 'fixed',
-    // left:0,
-    // bottom:0,
-    // right:0,
     position: 'fixed',
     left: 0,
     bottom: 0,
     width: '100%',
-    // backgroundColor: 'red',
-    // color: 'white',
-    // // textAlign: 'center'
-    // text-align: 'center';
-}
-
+    }
 }
 
 const Footer = () => {
@@ -48,18 +39,22 @@ const Footer = () => {
         //     </footer>
         // </div>
 
+	        // <footer style= {styles.footer}>
+		    //     <nav> 
+			//         <div className="nav-wrapper ##ff6f00 amber darken-4">
+			// 	        <ul className="right">
+            //               <li><a href="/aboutus">About Us</a></li>
+            //               <li><a href="/contact">Contact Us</a></li>
 	        <footer style= {styles.footer}>
 		        <nav> 
-			        <div className="nav-wrapper ##ff6f00 amber darken-4">
-				        <ul className="right">
-                          <li><a href="/aboutus">About Us</a></li>
-                          <li><a href="/contact">Contact Us</a></li>
+			        <div class="nav-wrapper deep-purple lighten-1">
+				        <ul class="right">
+					        <li><a class= "col"href="https://github.com/Pro-Three/Astrolove/tree/main"> <FaGithub  size={30}/> </a></li>
 				        </ul>
                              <p>&copy; Copyright. All Rights Reserved</p>
 			        </div>
 		        </nav>
 	        </footer>
-
     )
 }
 
