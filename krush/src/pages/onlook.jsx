@@ -1,5 +1,5 @@
-import React, {Suspense} from 'react'
-import {useImage} from 'react-image'
+import React, { Suspense } from 'react'
+import { useImage } from 'react-image'
 
 function MyImageComponent() {
     const {src} = useImage({
@@ -27,7 +27,7 @@ const OnLook = () => {
                 <h3>SUCCESSFUL MATCH!!!</h3>
 
                 <div className="col s12 m9 l9">
-                <Suspense>
+                <Suspense fallback={<div>Loading</div>}>
                     <MyImageComponent />
                 </Suspense>
                 </div> 
