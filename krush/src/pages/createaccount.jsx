@@ -26,7 +26,8 @@ const CreateAccount = () => {
         lastName: formState.lastName,
         signSun: formState.signSun,
         gender: formState.gender,
-        desiredRelationshipPref: formState.relationshipPref
+        desiredRelationshipPref: formState.relationshipPref,
+        aboutMe: formState.aboutMe
       },
     });
     const sunsign = formState.signSun
@@ -184,6 +185,22 @@ const CreateAccount = () => {
               </select>
               <label for="desiredRelationshipPreference">Desired Relationship Preference</label>
             </div>
+          </div>
+          <div className="row">
+            <form>
+              <div className="input-field col s12">
+                <i className="material-icons prefix">description</i>
+                <textarea
+                  name="aboutMe"
+                  id="aboutMe"
+                  className="materialize-textarea"
+                  data-length="240"
+                  onChange={handleChange}
+                >
+                </textarea>
+                <label for="aboutMe">About Me</label>
+              </div>
+            </form>
           </div>
           <div className="row center-align">
             <button className="waves-effect waves-light btn deep-purple lighten-1 btn-medium" type="submit" name="action">Submit
