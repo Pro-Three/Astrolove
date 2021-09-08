@@ -29,11 +29,15 @@ const CreateAccount = () => {
         desiredRelationshipPref: formState.relationshipPref
       },
     });
+    const sunsign = formState.signSun
     const token = mutationResponse.data.addUser.token;
     Auth.login(token);
+    localStorage.setItem('sunsign', sunsign)
+    localStorage.getItem(sunsign)
   };
 
   const handleChange = (event) => {
+    console.log(formState.signSun)
     const { name, value } = event.target;
     setFormState({
       ...formState,
