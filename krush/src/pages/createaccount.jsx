@@ -26,7 +26,8 @@ const CreateAccount = () => {
         lastName: formState.lastName,
         signSun: formState.signSun,
         gender: formState.gender,
-        desiredRelationshipPref: formState.relationshipPref
+        desiredRelationshipPref: formState.relationshipPref,
+        aboutMe: formState.aboutMe
       },
     });
     const token = mutationResponse.data.addUser.token;
@@ -180,6 +181,22 @@ const CreateAccount = () => {
               </select>
               <label for="desiredRelationshipPreference">Desired Relationship Preference</label>
             </div>
+          </div>
+          <div class="row">
+            <form>
+              <div class="input-field col s12">
+                <i className="material-icons prefix">description</i>
+                <textarea
+                  name="aboutMe"
+                  id="aboutMe"
+                  className="materialize-textarea"
+                  data-length="240"
+                  onChange={handleChange}
+                >
+                </textarea>
+                <label for="aboutMe">About Me</label>
+              </div>
+            </form>
           </div>
           <div class="row center-align">
             <button class="waves-effect waves-light btn deep-purple lighten-1 btn-medium" type="submit" name="action">Submit

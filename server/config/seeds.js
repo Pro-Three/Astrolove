@@ -151,7 +151,7 @@ db.once('open', async () => {
     signSun: 'Capricorn',
     gender: 'Genderqueer',
     desiredRelationshipPref: 'Open to dating',
-    aboutMe: 'Living, loving, laughing, 100% Capricorn.  I get along with all signs, JUST NO FBOI\'S!'
+    aboutMe: 'Living, loving, laughing, 100% Capricorn.  I get along with all signs, JUST NO F-BOI\'S!'
 });
 
   console.log('Users have been seeded');
