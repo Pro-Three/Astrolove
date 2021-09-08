@@ -33,12 +33,6 @@ const Matches = () => {
                     <p className="paragraphs">Something about the people like profiles, likes, etc.</p>
                 </div>
             </div>
-
-            
-            
-
-            
-
         </div>
     )
 }
