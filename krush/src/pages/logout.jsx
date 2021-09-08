@@ -9,7 +9,12 @@ const styles = {
         color: 'white',
         marginTop: '10px',
         marginBottom: '10px',
+        marginRight: '5px',
         padding: "auto"
+    },
+
+    contains: {
+        padding: '20px'
     }
 }
 
@@ -17,14 +22,23 @@ const Logout = () => {
     return (
         <div className="container">
             <div className="row grey lighten-3 center">
-            <h3>Are you sure....?  🥺🥺🥺</h3>
+            <h3 style={styles.contains}>Are you sure....?  🥺🥺🥺</h3>
             <button
                 className="logoutBtn waves-effect waves-light btn deep-purple lighten-1 btn-medium"
                 id="logoutBtn"
                 href="/"
                 onClick={() => Auth.logout()}
+                style= {styles.button}
             >
                 Logout
+            </button>
+            <button
+                className="stayInBtn waves-effect waves-light btn deep-purple lighten-1 btn-medium"
+                id="stayInBtn"
+                href="/"
+                style= {styles.button}
+            >
+                Stay Here
             </button>
             </div>
         </div>
