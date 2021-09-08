@@ -83,7 +83,7 @@ const CreateAccount = () => {
                 onChange={handleChange}
               />
               <label for="email" data-error="wrong" data-success="right">Email</label>
-              {/* <span class="helper-text" data-error="wrong" data-success="right">Helper text</span> */}
+              {/* <span className="helper-text" data-error="wrong" data-success="right">Helper text</span> */}
             </div>
           </div>
           <div className="row">
@@ -181,9 +181,9 @@ const CreateAccount = () => {
               <label for="desiredRelationshipPreference">Desired Relationship Preference</label>
             </div>
           </div>
-          <div class="row center-align">
-            <button class="waves-effect waves-light btn deep-purple lighten-1 btn-medium" type="submit" name="action">Submit
-              <i class="material-icons right">assignment_ind</i>
+          <div className="row center-align">
+            <button className="waves-effect waves-light btn deep-purple lighten-1 btn-medium" type="submit" name="action">Submit
+              <i className="material-icons right">assignment_ind</i>
             </button>
           </div>
           <Link to="/login">← Go to Login</Link>
