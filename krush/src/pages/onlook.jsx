@@ -39,9 +39,16 @@ const OnLook = () => {
                     <h4>Match Score:</h4>
                     <h5 className="center">90%</h5>
                 </div>
+                
                 <div className="col s3 m3 l3">
                     <p className="paragraphs">Something about the people like profiles, likes, etc.</p>
                 </div>
+
+                <div className="col s12 m12 l12 center">
+                    <button style= {styles.button} className="sendGoodVibes waves-effect waves-light btn deep-purple lighten-1 btn-medium" id="sendGoodVibes">Like</button>
+                    <button style= {styles.button} className="continueJourney waves-effect waves-light btn deep-purple lighten-1 btn-medium" id="continueJourney">Continue -></button>
+                </div> 
+
             </div>
         </div>
     )

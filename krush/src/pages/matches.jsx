@@ -2,6 +2,17 @@ import React, { Suspense } from 'react';
 import { useImage } from 'react-image';
 
 
+const styles = {
+    button: {
+        width: '150px',
+        height: '35px',
+        color: 'white',
+        marginTop: '10px',
+        marginBottom: '10px',
+        marginRight: '5px',
+        padding: "auto"
+    }
+}
 
 function MyImageComponent() {
     const {src} = useImage({
@@ -32,8 +43,14 @@ const Matches = () => {
                 <div className="col s3 m3 l3">
                     <p className="paragraphs">Something about the people like profiles, likes, etc.</p>
                 </div>
+                
+                <div className="col s12 m12 l12 center">
+                    <button style= {styles.button} className="sendChat waves-effect waves-light btn deep-purple lighten-1 btn-medium" id="sendChat">Send Chat</button>
+                </div>
             </div>
         </div>
+
+        
     )
 }
 
