@@ -6,10 +6,12 @@ import Auth from '../utils/auth';
 import { ADD_USER } from '../utils/mutations';
 
 
+
 document.addEventListener('DOMContentLoaded', function() {
   var elems = document.querySelectorAll('select');
   var instances = Select.FormSelect.init(elems);
 });
+
 
 const CreateAccount = () => {
   const [formState, setFormState] = useState({ email: '', password: '' });
@@ -32,7 +34,6 @@ const CreateAccount = () => {
     const token = mutationResponse.data.addUser.token;
     Auth.login(token);
   };
-
   const handleChange = (event) => {
     const { name, value } = event.target;
     setFormState({
@@ -40,6 +41,7 @@ const CreateAccount = () => {
       [name]: value,
     });
   };
+
     return (
 <div class="row">
   <div class="col s12 l4 offset-l4">
@@ -182,7 +184,7 @@ const CreateAccount = () => {
             </div>
           </div>
           <div class="row center-align">
-            <button class="waves-effect waves-light btn deep-purple lighten-1 btn-medium" type="submit" name="action" onClick={Data}>Submit
+            <button class="waves-effect waves-light btn deep-purple lighten-1 btn-medium" type="submit" name="action" >Submit
               <i class="material-icons right">assignment_ind</i>
             </button>
           </div>
@@ -195,4 +197,4 @@ const CreateAccount = () => {
     )
 };
 
-export default CreateAccount
+export default CreateAccount;
