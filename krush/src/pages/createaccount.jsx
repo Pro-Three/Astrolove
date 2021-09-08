@@ -30,11 +30,15 @@ const CreateAccount = () => {
         aboutMe: formState.aboutMe
       },
     });
+    const sunsign = formState.signSun
     const token = mutationResponse.data.addUser.token;
     Auth.login(token);
+    localStorage.setItem('sunsign', sunsign)
+    localStorage.getItem(sunsign)
   };
 
   const handleChange = (event) => {
+    console.log(formState.signSun)
     const { name, value } = event.target;
     setFormState({
       ...formState,
@@ -84,7 +88,7 @@ const CreateAccount = () => {
                 onChange={handleChange}
               />
               <label for="email" data-error="wrong" data-success="right">Email</label>
-              {/* <span class="helper-text" data-error="wrong" data-success="right">Helper text</span> */}
+              {/* <span className="helper-text" data-error="wrong" data-success="right">Helper text</span> */}
             </div>
           </div>
           <div className="row">
@@ -182,9 +186,9 @@ const CreateAccount = () => {
               <label for="desiredRelationshipPreference">Desired Relationship Preference</label>
             </div>
           </div>
-          <div class="row">
+          <div className="row">
             <form>
-              <div class="input-field col s12">
+              <div className="input-field col s12">
                 <i className="material-icons prefix">description</i>
                 <textarea
                   name="aboutMe"
@@ -198,9 +202,9 @@ const CreateAccount = () => {
               </div>
             </form>
           </div>
-          <div class="row center-align">
-            <button class="waves-effect waves-light btn deep-purple lighten-1 btn-medium" type="submit" name="action">Submit
-              <i class="material-icons right">assignment_ind</i>
+          <div className="row center-align">
+            <button className="waves-effect waves-light btn deep-purple lighten-1 btn-medium" type="submit" name="action">Submit
+              <i className="material-icons right">assignment_ind</i>
             </button>
           </div>
           <Link to="/login">← Go to Login</Link>
