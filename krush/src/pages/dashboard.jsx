@@ -2,10 +2,13 @@ import React from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom'
 
+
+const sunsign = localStorage.getItem("sunsign")
+console.log(sunsign)
 const options = {
   method: 'POST',
   url: 'https://sameer-kumar-aztro-v1.p.rapidapi.com/',
-  params: {sign: 'capricorn', day: 'today'},
+  params: {sign: sunsign, day: 'today'},
   headers: {
     'x-rapidapi-host': 'sameer-kumar-aztro-v1.p.rapidapi.com',
     'x-rapidapi-key': process.env.REACT_APP_RAPID_API_KEY
@@ -14,7 +17,6 @@ const options = {
 
 const Dashboard = () => {
     const Daily = () =>axios.request(options).then(function (response) {
-      
         console.log(response.data.description);
    }).catch(function (error) {
         console.error(error);
