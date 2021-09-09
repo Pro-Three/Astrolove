@@ -34,7 +34,7 @@ const Navbar = () => {
 
             <ul class="right hide-on-med-and-down">
                 {/* PRE-LOGIN...? */}
-                <li><a href="/aboutus">aboutUs</a></li>
+                {/* <li><a href="/aboutus">aboutUs</a></li> */}
 
                 <li><a href="/onload">Onload</a></li>
                 <li><a href="/login">Login</a></li>

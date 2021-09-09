@@ -127,7 +127,7 @@ const Chats = () => {
     
     </ol>
 
-    <input class="textarea" type="text" placeholder="Type here!"/><div class="emojis"></div>    
+    {/* <input class="textarea" type="text" placeholder="Type here!"/><div class="emojis"></div>     */}
     </div>
     </div>
   );
