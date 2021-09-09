@@ -1,17 +1,48 @@
-import React from 'react';
+// import React, { useEffect } from 'react';
+// import { Widget, addResponseMessage } from 'react-chat-widget';
 
-const AboutUs = () => {
-    return (
-        <div className="container">
-            <div className="row grey lighten-3">
+// import 'react-chat-widget/lib/styles.css';
 
-            <h4>We Are Here for You</h4>
+// import me from '../img/virgo.jpg'
 
-            <p>Thank you for asking about us!</p>
+// function AboutUs() {
+//   useEffect(() => {
+//     addResponseMessage('Welcome to this **awesome** chat!');
+//   }, []);
 
-            </div>
-        </div>
-    )
-}
+//   const handleNewUserMessage = (newMessage) => {
+//     console.log(`New message incoming! ${newMessage}`);
+//     // Now send the message throught the backend API
+//   };
 
-export default AboutUs
+//     return (
+//       <div className="App">
+//         <Widget
+//           handleNewUserMessage={handleNewUserMessage}
+//           profileAvatar={me}
+//           title="My new awesome title"
+//           subtitle="And my cool subtitle"
+//         />
+//       </div>
+//     );
+// }
+
+// // export default AboutUs;
+
+// // import React from 'react';
+
+// // const AboutUs = () => {
+// //     return (
+// //         <div className="container">
+// //             <div className="row grey lighten-3">
+
+// //             <h4>We Are Here for You</h4>
+
+// //             <p>Thank you for asking about us!</p>
+
+// //             </div>
+// //         </div>
+// //     )
+// // }
+
+// export default AboutUs
