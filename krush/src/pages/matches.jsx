@@ -24,7 +24,7 @@ function MyImageComponent() {
 
 const Matches = () => {
     return (
-        <div className="container">
+        <div className="container z-depth-2">
             <div className="row grey lighten-3">
                 <h3 className="center">Match Name</h3>
                 <div className="col s6 m6 l6">

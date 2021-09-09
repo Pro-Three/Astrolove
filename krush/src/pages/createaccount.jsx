@@ -50,7 +50,7 @@ const CreateAccount = () => {
     return (
 <div class="row">
   <div style= {styles.profiles} class="col s12 l4 offset-l4">
-    <div class="card grey lighten-3">
+    <div class="card grey lighten-3 z-depth-2">
       <div class="card-content">
         <h4 class="card-title center-align">Create Account</h4>
         <form onSubmit={handleFormSubmit}>

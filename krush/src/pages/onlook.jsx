@@ -37,7 +37,7 @@ const styles = {
 
 const OnLook = () => {
     return (
-        <div className="container">
+        <div className="container z-depth-2">
             <div style= {styles.box} className="row grey lighten-3">
                 <h3 className="center">Potential Match</h3>
                 <div className="col s12 m12 l12 center">

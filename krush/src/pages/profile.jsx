@@ -37,7 +37,7 @@ function MyImageComponent() {
 const Profile = () => {
     return (
         <div>
-        <div className="clock">
+        <div className="clock z-depth-2">
             <div id="Date"></div>
                 <ul style= {styles.ul}>
                     <li style= {styles.li} id="hours"></li>
@@ -48,7 +48,7 @@ const Profile = () => {
                 </ul>
             <p class="flow-text center-align" id= "Date">It's Virgo Season!!!</p>    
         </div>
-        <div className="container">
+        <div className="container z-depth-2">
             <div style= {styles.profiles} className="row grey lighten-3 center">
                 <div className="col s12 l12 m12">
                     <h3>Profile Details:</h3>

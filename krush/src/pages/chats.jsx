@@ -96,7 +96,7 @@ import React, { Component } from 'react'
 const Chats = () => {
     return (
         
-        <div className="container">
+        <div className="container z-depth-2">
             <div className="row grey lighten-3">
 
             <h3 className="center">You talk here</h3>

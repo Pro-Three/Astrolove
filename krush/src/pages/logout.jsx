@@ -20,7 +20,7 @@ const styles = {
 
 const Logout = () => {
     return (
-        <div className="container">
+        <div className="container z-depth-2">
             <div className="row grey lighten-3 center">
             <h3 style={styles.contains}>Are you sure....?  🥺🥺🥺</h3>
             <button

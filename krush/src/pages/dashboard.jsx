@@ -32,7 +32,7 @@ const Dashboard = () => {
     });
 
     return (
-        <div className="container">
+        <div className="container z-depth-2">
             <div className="row grey lighten-3">
 
             <h3 className="col s12 m12 l12">Dashboard</h3>

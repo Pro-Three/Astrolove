@@ -60,7 +60,7 @@ function Login(props) {
 
     <div className="row">
       <div className="col s12 l4 offset-l4">
-        <div className="card grey lighten-3">
+        <div className="card grey lighten-3 z-depth-2">
           <div className="card-content">
             <h4 className="card-title center-align">Login</h4>
             <form onSubmit={handleFormSubmit}>
