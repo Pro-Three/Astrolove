@@ -6,10 +6,12 @@ import Auth from '../utils/auth';
 import { ADD_USER } from '../utils/mutations';
 
 
+
 document.addEventListener('DOMContentLoaded', function() {
   var elems = document.querySelectorAll('select');
   var instances = Select.FormSelect.init(elems);
 });
+
 
 const CreateAccount = () => {
   const [formState, setFormState] = useState({ email: '', password: '' });
@@ -30,13 +32,14 @@ const CreateAccount = () => {
         aboutMe: formState.aboutMe
       },
     });
-    const sunsign = formState.signSun
+    const email = formState.email;
+    const sunsign = formState.signSun;
     const token = mutationResponse.data.addUser.token;
     Auth.login(token);
+    localStorage.setItem('email', email)
     localStorage.setItem('sunsign', sunsign)
     localStorage.getItem(sunsign)
   };
-
   const handleChange = (event) => {
     console.log(formState.signSun)
     const { name, value } = event.target;
@@ -221,6 +224,6 @@ const CreateAccount = () => {
   </div>
 </div>
     )
-}
+};
 
-export default CreateAccount
+export default CreateAccount;
