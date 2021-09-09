@@ -15,13 +15,12 @@ function MyImageComponent() {
     ul: {
         width: '800px',
         margin: '0 auto',
-        padding: '0px',
         listStyle: 'none',
         textAlign: 'center'
     },
     li: {
         display: 'inline',
-        fontSize: '10em',
+        fontSize: '350%',
         textAlign: 'center',
         textShadow: '0 0 5px #00c6ff'
     },
@@ -38,7 +37,7 @@ function MyImageComponent() {
 const Profile = () => {
     return (
         <div>
-        <div class="clock">
+        <div className="clock">
             <div id="Date"></div>
                 <ul style= {styles.ul}>
                     <li style= {styles.li} id="hours"></li>
