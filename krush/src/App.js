@@ -68,6 +68,7 @@ function App() {
               {/* NAVBAR */}
 
               {/* LOGIN */}
+              <Route path="/aboutus" exact component={AboutUs} />
               <Route path="/onload" exact component={OnLoad} />
               <Route path="/login" exact component={Login} />
               <Route path="/createaccount" exact component={CreateAccount} />
@@ -85,7 +86,6 @@ function App() {
               {/*  */}
 
               {/* Footer */}
-              <Route path="/aboutus" exact component={AboutUs} />
               <Route path="/contact" exact component={Contact} />
       
             { /*</Switch>*/ }
