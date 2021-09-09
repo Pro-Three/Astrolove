@@ -28,13 +28,18 @@ const CreateAccount = () => {
         lastName: formState.lastName,
         signSun: formState.signSun,
         gender: formState.gender,
-        desiredRelationshipPref: formState.relationshipPref
+        desiredRelationshipPref: formState.relationshipPref,
+        aboutMe: formState.aboutMe
       },
     });
+    const sunsign = formState.signSun
     const token = mutationResponse.data.addUser.token;
     Auth.login(token);
+    localStorage.setItem('sunsign', sunsign)
+    localStorage.getItem(sunsign)
   };
   const handleChange = (event) => {
+    console.log(formState.signSun)
     const { name, value } = event.target;
     setFormState({
       ...formState,
@@ -42,9 +47,15 @@ const CreateAccount = () => {
     });
   };
 
+  const styles = {
+    profiles: {
+        marginBottom: '200px'
+    }}
+
+
     return (
 <div class="row">
-  <div class="col s12 l4 offset-l4">
+  <div style= {styles.profiles} class="col s12 l4 offset-l4">
     <div class="card grey lighten-3">
       <div class="card-content">
         <h4 class="card-title center-align">Create Account</h4>
@@ -85,7 +96,7 @@ const CreateAccount = () => {
                 onChange={handleChange}
               />
               <label for="email" data-error="wrong" data-success="right">Email</label>
-              {/* <span class="helper-text" data-error="wrong" data-success="right">Helper text</span> */}
+              {/* <span className="helper-text" data-error="wrong" data-success="right">Helper text</span> */}
             </div>
           </div>
           <div className="row">
@@ -183,9 +194,25 @@ const CreateAccount = () => {
               <label for="desiredRelationshipPreference">Desired Relationship Preference</label>
             </div>
           </div>
-          <div class="row center-align">
-            <button class="waves-effect waves-light btn deep-purple lighten-1 btn-medium" type="submit" name="action" >Submit
-              <i class="material-icons right">assignment_ind</i>
+          <div className="row">
+            <form>
+              <div className="input-field col s12">
+                <i className="material-icons prefix">description</i>
+                <textarea
+                  name="aboutMe"
+                  id="aboutMe"
+                  className="materialize-textarea"
+                  data-length="240"
+                  onChange={handleChange}
+                >
+                </textarea>
+                <label for="aboutMe">About Me</label>
+              </div>
+            </form>
+          </div>
+          <div className="row center-align">
+            <button className="waves-effect waves-light btn deep-purple lighten-1 btn-medium" type="submit" name="action">Submit
+              <i className="material-icons right">assignment_ind</i>
             </button>
           </div>
           <Link to="/login">← Go to Login</Link>

@@ -15,7 +15,6 @@ module.exports = {
     }
 
     if (!token) {
-      console.log('no token:  ', req)
       return req;
     }
 

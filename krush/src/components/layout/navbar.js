@@ -25,7 +25,7 @@ const Navbar = () => {
         // </nav>
         // </div>
 
-    <nav class="nav-wrapper indigo transparent z-depth-0">
+        <nav class="nav-wrapper indigo transparent z-depth-0">
         <div class="container">
             <a href="/" class="brand-logo">AstroLove</a>
             <a href="/" class="sidenav-trigger" data-target="mobile-links">
@@ -56,7 +56,7 @@ const Navbar = () => {
                 <li><a href="/matches">Matches</a></li>
                 <li><a href="/logout">Logout</a></li>
         </ul>
-    </nav>
+        </nav>
 
     
 
