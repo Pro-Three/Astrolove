@@ -45,9 +45,16 @@ const CreateAccount = () => {
       [name]: value,
     });
   };
+
+  const styles = {
+    profiles: {
+        marginBottom: '200px'
+    }}
+
+
     return (
 <div class="row">
-  <div class="col s12 l4 offset-l4">
+  <div style= {styles.profiles} class="col s12 l4 offset-l4">
     <div class="card grey lighten-3">
       <div class="card-content">
         <h4 class="card-title center-align">Create Account</h4>

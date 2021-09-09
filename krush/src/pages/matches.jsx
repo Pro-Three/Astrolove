@@ -11,7 +11,7 @@ const styles = {
         marginBottom: '10px',
         marginRight: '5px',
         padding: "auto"
-    }
+    },
 }
 
 function MyImageComponent() {
