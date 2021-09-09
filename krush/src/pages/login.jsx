@@ -6,21 +6,49 @@ import Auth from '../utils/auth';
 import { useUserContext } from '../utils/UserContext';
 
 function Login(props) {
-  const [formState, setFormState] = useState({ email: '', password: '', sunSign: '' });
+  const [formState, setFormState] = useState({ email: '', password: '' });
   const [login, { error }] = useMutation(LOGIN);
-  const [{ currentUser }, {setCurrentUser}] = useUserContext();
+  const [{ currentUser }, { setCurrentUser }] = useUserContext();
 
   const handleFormSubmit = async (event) => {
     event.preventDefault();
     console.log('EMAIL:  ', formState.email)
     console.log(`PASSWORD:  `, formState.password)
+    // setCurrentUser({
+    //   username: 'username',
+    //   email: 'email',
+    //   signSun: 'signsun',
+    //   firstName: 'firstname',
+    //   lastName: 'lastname',
+    //   gender: 'gender',
+    //   desiredRelationshipPref: 'relationship',
+    //   aboutMe: 'aboutme'
+    // })
+    console.log('CURRENT USER (state) (login):  ', currentUser);
     try {
       const mutationResponse = await login({
         variables: { email: formState.email, password: formState.password },
       });
+      console.log('mutationResponse.data.login.user:  ', mutationResponse.data.login.user)
+      
       if (mutationResponse.data.login.user) {
-        setCurrentUser(mutationResponse.data.login.user)
+        console.log('mutationResponse data login user is true')
+        // setCurrentUser(mutationResponse.data.login.user)
+        // setCurrentUser({
+        //   email: formState.email
+        // })
+        // setCurrentUser({
+        //   username: mutationResponse.data.login.user.username,
+        //   email: mutationResponse.data.login.user.email,
+        //   signSun: mutationResponse.data.login.user.signSun,
+        //   firstName: mutationResponse.data.login.user.firstName,
+        //   lastName: mutationResponse.data.login.user.lastName,
+        //   gender: mutationResponse.data.login.user.gender,
+        //   desiredRelationshipPref: mutationResponse.data.login.user.desiredRelationshipPref,
+        //   aboutMe: mutationResponse.data.login.user
+        // })
       }
+      
       const token = mutationResponse.data.login.token;
       Auth.login(token);
     } catch (e) {
@@ -34,6 +62,16 @@ function Login(props) {
       ...formState,
       [name]: value,
     });
+    setCurrentUser({
+      username: 'username_GHOSTDOG',
+      email: formState.email,
+      signSun: 'signsun',
+      firstName: 'firstname',
+      lastName: 'lastname',
+      gender: 'gender',
+      desiredRelationshipPref: 'relationship',
+      aboutMe: 'aboutme'
+    })
   };
 
   return (
