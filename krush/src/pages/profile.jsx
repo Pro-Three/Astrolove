@@ -32,7 +32,6 @@ function MyImageComponent() {
         fontSize: '125%'
     }
 
-
     
 }
 
