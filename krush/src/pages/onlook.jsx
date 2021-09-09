@@ -18,30 +18,45 @@ const styles = {
         marginBottom: '10px',
         marginRight: '5px',
         padding: "auto"
+    },
+    box: {
+        marginBottom: "200px"
+    },
+    otherList: {
+        fontSize: '125%',
+        marginTop: '20px'
+    },
+    para: {
+        marginTop: '20px',
+    },
+    parat: {
+        paddingRight: '5px',
+        paddingLeft: '5px'
     }
 }
 
 const OnLook = () => {
     return (
         <div className="container">
-            <div className="row grey lighten-3">
-                <h3 className="center">Match Name</h3>
-                <div className="col s6 m6 l6">
+            <div style= {styles.box} className="row grey lighten-3">
+                <h3 className="center">Potential Match</h3>
+                <div className="col s12 m12 l12 center">
                     <Suspense fallback={<div>Loading</div>}>
                         <MyImageComponent />
                     </Suspense>
                 </div> 
 
-                <div className="col s3 m3 l3">
-                    <h4>Match Sign:</h4>
-                    <h5 className="center">Leo!</h5>
-                    <h5 className="center">♌️</h5>
-                    <h4>Match Score:</h4>
-                    <h5 className="center">90%</h5>
+                <div style= {styles.otherList} className="col s3 m3 l3 center">
+                    <ul>
+                        <li>User's Name</li>
+                        <li>User's Sun Sign</li>
+                        <li>Gender</li>
+                        <li>Desired Relationship Preference</li>
+                    </ul>
                 </div>
                 
-                <div className="col s3 m3 l3">
-                    <p className="paragraphs">Something about the people like profiles, likes, etc.</p>
+                <div style= {styles.para} className="col s9 m9 l9 center">
+                    <p style= {styles.parat} className="paragraphs">There are only three ways to make this work. The first is to let me take care of everything. The second is for you to take care of everything. The third is to split everything 50 / 50. I think the last option is the most preferable, but I'm certain it'll also mean the end of our marriage.</p>
                 </div>
 
                 <div className="col s12 m12 l12 center">

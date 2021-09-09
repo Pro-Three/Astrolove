@@ -1,110 +1,136 @@
 import React, { Component } from 'react'
-// import { Launcher } from 'react-chat-window'
-// import { Launcher } from '@wealize/react-chat-window'
-
-// class Demo extends Component {
-//   constructor() {
-//     super();
-//     this.state = {
-//       messageList: messageHistory,
-//       newMessagesCount: 0,
-//       isOpen: false
-//     };
-//   }
-
-//   _onMessageWasSent(message) {
-//     this.setState({
-//       messageList: [...this.state.messageList, message],
-//       newMessagesCount: 0
-//     });
-//   }
-
-//   _onFilesSelected(fileList) {
-//     const objectURL = window.URL.createObjectURL(fileList[0]);
-
-//     this.setState({
-//       messageList: [...this.state.messageList, {
-//         type: 'file', author: 'me',
-//         data: {
-//           url: objectURL,
-//           fileName: fileList[0].name
-//         }
-//       }]
-//     });
-//   }
-
-//   _sendMessage(text) {
-//     if (text.length > 0) {
-//       const newMessagesCount = this.state.newMessagesCount + 1;
-//       this.setState({
-//         newMessagesCount: newMessagesCount,
-//         messageList: [...this.state.messageList, {
-//           author: 'them',
-//           type: 'text',
-//           is_chatbot: true,
-//           data: { text }
-//         }]
-//       });
-//     }
-//   }
-
-//   _handleClick() {
-//     this.setState({
-//       isOpen: !this.state.isOpen
-//     });
-//   }
-
-//   _handleReadMessages () {
-//     this.setState({
-//       newMessagesCount: 0
-//     })
-//   }
-
-//   render() {
-//     return <div>
-//       <TestArea
-//         onMessage={this._sendMessage.bind(this)}
-//       />
-//       <Launcher
-//         agentProfile={{
-//           teamName: 'My bot',
-//           teamExplanation: 'A bot'
-//         }}
-//         onMessageWasSent={this._onMessageWasSent.bind(this)}
-//         onFilesSelected={this._onFilesSelected.bind(this)}
-//         messageList={this.state.messageList}
-//         newMessagesCount={this.state.newMessagesCount}
-//         handleReadMessages={this._handleReadMessages.bind(this)}
-//         handleClick={this._handleClick.bind(this)}
-//         isOpen={this.state.isOpen}
-//         showEmoji
-//         showFileIcon
-//         verticalQuickReplies={true}
-//       />
-//     </div>;
-//   }
-// }
-
-
-
-
-
-
-
-
+import '../chat.css';
 
 const Chats = () => {
-    return (
-        <div className="container">
-            <div className="row grey lighten-3">
+  return (
+    <div className="container">
 
-            <h3 className="center">You talk here</h3>
-
-            {/* <Demo /> */}
-
-            </div>
+<div className="container cyan accent-4">
+    <div class="menu">
+            <div class="back"><i class="fa fa-chevron-left"></i> <img src="https://i.imgur.com/DY6gND0.png" draggable="false"/></div>
+            <div class="name" >Hamlet</div>
+            <div class="last">18:09</div>
         </div>
-    )
+    <ol class="chat">
+    <li class="other">
+        <div class="avatar"><img src="https://i.imgur.com/DY6gND0.png" draggable="false"/></div>
+      <div class="msg">
+        <p>Hey, how are you?</p>
+        <p>Does your horoscope like pizza?<emoji class="pizza"/></p>
+        <time>September 8th, 2021</time>
+      </div>
+    </li>
+    <li class="self">
+        <div class="avatar"><img src="https://i.imgur.com/HYcn9xO.png" draggable="false"/></div>
+      <div class="msg">
+        <p>William</p>
+        <p>Hey what's up</p>
+        <p>I have to study for my React class... <emoji class="books"/></p>
+        <p>Maybe another day</p>
+        <time>September 8th, 2021</time>
+      </div>
+    </li>
+    <li class="other">
+        <div class="avatar"><img src="https://i.imgur.com/DY6gND0.png" draggable="false"/></div>
+      <div class="msg">
+        <p>Guess what my horoscope said today??? <emoji class="suffocated"/></p>
+        <time>September 8th, 2021</time>
+      </div>
+    </li>
+    <li class="self">
+        <div class="avatar"><img src="https://i.imgur.com/HYcn9xO.png" draggable="false"/></div>
+      <div class="msg">
+        <p>Dude you can't always believe what the internet tells you</p>
+        <time>September 8th, 2021</time>
+      </div>
+    </li>
+    <li class="other">
+        <div class="avatar"><img src="https://i.imgur.com/DY6gND0.png" draggable="false"/></div>
+      <div class="msg">
+        <p><emoji class="scream"/></p>
+        <p>That a virgo was going to come and ruin my life<emoji class="please"/></p>
+        <time>September 8th, 2021</time>
+      </div>
+    </li>
+    <li class="self">
+        <div class="avatar"><img src="https://i.imgur.com/HYcn9xO.png" draggable="false"/></div>
+      <div class="msg">
+        <img src="https://i.imgur.com/QAROObc.jpg" draggable="false"/>
+        <p>That's super accurate no lie</p>
+        <p>Dude read mine!!</p>
+        <time>September 8th, 2021</time>
+      </div>
+    </li>
+    <li class="other">
+        <div class="avatar"><img src="https://i.imgur.com/DY6gND0.png" draggable="false"/></div>
+      <div class="msg">
+        {/* <p>Gracias! <emoji class="hearth_blue"/></p> */}
+        <p>Mercury is in retrograde be safe out there bro</p>
+        <time>September 8th, 2021</time>
+      </div>
+    </li>
+    
+        {/* <div class="day">Hoy</div>
+    <li class="self">
+        <div class="avatar"><img src="https://i.imgur.com/HYcn9xO.png" draggable="false"/></div>
+      <div class="msg">
+        <p>Te apetece jugar a Minecraft?</p>
+        <time>18:03</time>
+      </div>
+    </li>
+    <li class="other">
+        <div class="avatar"><img src="https://i.imgur.com/DY6gND0.png" draggable="false"/></div>
+      <div class="msg">
+        <p>Venga va, hace ya mucho que no juego...</p>
+        <time>18:07</time>
+      </div>
+    </li>
+    <li class="self">
+        <div class="avatar"><img src="https://i.imgur.com/HYcn9xO.png" draggable="false"/></div>
+      <div class="msg">
+        <p>Ehh, me crashea el Launcher... <emoji class="cryalot"/></p>
+        <time>18:08</time>
+      </div>
+    </li>
+    <li class="other">
+        <div class="avatar"><img src="https://i.imgur.com/DY6gND0.png" draggable="false"/></div>
+      <div class="msg">
+        <p><emoji class="lmao"/></p>
+        <time>18:08</time>
+      </div>
+    </li>
+    <li class="self">
+        <div class="avatar"><img src="https://i.imgur.com/HYcn9xO.png" draggable="false"/></div>
+      <div class="msg">
+        <p>Es broma</p>
+        <p>Ataque Moai!</p>
+        <p><span><emoji class="moai"/></span><span><emoji class="moai"/></span><span><emoji class="moai"/></span><span><emoji class="moai"/></span><span><emoji class="moai"/></span><span><emoji class="moai"/></span></p>
+        <time>18:09</time>
+      </div>
+    </li>
+    <li class="other">
+        <div class="avatar"><img src="https://i.imgur.com/DY6gND0.png" draggable="false"/></div>
+      <div class="msg">
+          <p>Copón</p>
+        <p><emoji class="funny"/></p>
+        <time>18:08</time>
+      </div>
+    </li>
+    <li class="self">
+        <div class="avatar"><img src="https://i.imgur.com/HYcn9xO.png" draggable="false"/></div>
+      <div class="msg">
+        <p>Hey there's a new update about this chat UI with more responsive elements! Check it now:</p>
+        <p><a href="https://codepen.io/Varo/pen/YPmwpQ" target="parent">Chat UI 2.0</a></p>
+        <time>18:09</time>
+      </div>
+    </li> */}
+    
+    </ol>
+
+    {/* <input class="textarea" type="text" placeholder="Type here!"/><div class="emojis"></div>     */}
+    </div>
+    </div>
+  );
 }
 
 export default Chats
