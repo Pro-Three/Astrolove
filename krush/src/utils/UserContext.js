@@ -1,14 +1,29 @@
+import { useQuery } from '@apollo/client';
 import React, { useState, createContext, useContext } from 'react';
+import { QUERY_USER } from '../utils/queries';
 
 export const UserContext = React.createContext();
 export const useUserContext = () => useContext(UserContext);
 
 const UserProvider = (props) => {
   const [currentUser, setCurrentUser] = useState({
-    username: 'TEST_USERNAME',
-    email: 'TEST_EMAIL',
-    signSun: 'TEST_SIGNSUN',
+    username: '',
+    email: '',
+    signSun: '',
+    firstName: '',
+    gender: '',
+    desiredRelationshipPref: '',
+    aboutMe: '',
+    // TO DO --> likes: []
   });
+
+  // const { data, loading, error } = useQuery(QUERY_USER, { variables: {username: 'dougdoug' } });
+  // console.log(`DATA:  `, data);
+  // console.log(`ERROR:  `, error);
+  // // console.log('USER:  ', user);
+  // if (data && !error) {
+  //   setCurrentUser(data.user);
+  // }
 
   return (
     <UserContext.Provider value={[{ currentUser }, {setCurrentUser}]} {...props}>
