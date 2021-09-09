@@ -1,40 +1,48 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
-// import $ from 'jquery';
+const styles = {
+    button: {
+        width: '150px',
+        height: '35px',
+        color: 'white',
+        marginTop: '10px',
+        marginBottom: '10px',
+        padding: "auto"
+    }
+}
 
 
 const OnLoad = () => {
-
-    const newUse = () => { 
-        console.log('loginClicked!');
-    };
-
-    const exUse = () => { 
-        console.log('newClicked!');
-    };
-    
     return (
-        <div className="container">
-            <div className="row #b0bec5 blue-grey lighten-3">
-            <h3 className="center">Welcome Starchild</h3>
-
-            <div className="col s12 m12 l12 center">
-            <Link to="/createaccount">
-            <button type="button" className="newUse" id="newUse" onClick={newUse}>New User</button>
-            </Link>
-            </div>
-
-            <div className="col s12 m12 l12 center">
-            <Link to="/login">
-            <button type="button" className="exUse" id="exUse" onClick={exUse}>Existing User</button>
-            </Link>
-            </div>
-            
-            
-
-            </div>
-        </div>
+  <div class="carousel carousel-slider">
+    <div class="carousel-fixed-item">
+      <div class="container">
+        <h1 class="white-text">Astro Love</h1>
+        <a class="waves-effect waves-light btn deep-purple lighten-1 btn-medium" href="/login" target="_blank">LOGIN Starchild</a>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a class="waves-effect waves-light btn deep-purple lighten-1 btn-medium" href="/createaccount" target="_blank">CREATE Account</a>
+      </div>
+    </div>
+    <div class="carousel-item cc1 white-text" href="#one!" >
+      <div class="container" >
+        <h2>First Slide</h2>
+        <p class="white-text">Etiam porta sem malesuada magna mollis euismod.</p>
+      </div>  
+    </div>
+    <div class="carousel-item cc2 white-text" href="#two!">
+      <div class="container">
+        <h2>Second Slide</h2>
+        <p class="white-text">Etiam porta sem malesuada magna mollis euismod.</p>
+      </div>  
+    </div>
+    <div class="carousel-item cc3 white-text" href="#three!">
+      <div class="container">
+        <h2>Third Slide</h2>
+        <p class="white-text">Etiam porta sem malesuada magna mollis euismod.</p>
+      </div>  
+    </div>
+  </div>
+  
     )
 }
 

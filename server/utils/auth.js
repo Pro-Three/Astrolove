@@ -10,6 +10,7 @@ module.exports = {
 
     // ["Bearer", "<tokenvalue>"]
     if (req.headers.authorization) {
+      console.log('req.headers.authorization token:  ', token)
       token = token.split(' ').pop().trim();
     }
 
@@ -19,6 +20,7 @@ module.exports = {
 
     try {
       const { data } = jwt.verify(token, secret, { maxAge: expiration });
+      console.log('try data ... jwt.verify ... :  ', data)
       req.user = data;
     } catch {
       console.log('Invalid token');
