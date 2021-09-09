@@ -24,11 +24,15 @@ const styles = {
     },
     otherList: {
         fontSize: '125%',
-        marginTop: '10px'
+        marginTop: '20px'
     },
     para: {
-        marginTop: '10px'
+        marginTop: '20px',
     },
+    parat: {
+        paddingRight: '5px',
+        paddingLeft: '5px'
+    }
 }
 
 const OnLook = () => {
@@ -51,8 +55,8 @@ const OnLook = () => {
                     </ul>
                 </div>
                 
-                <div className="col s9 m9 l9 center">
-                    <p className="paragraphs">There are only three ways to make this work. The first is to let me take care of everything. The second is for you to take care of everything. The third is to split everything 50 / 50. I think the last option is the most preferable, but I'm certain it'll also mean the end of our marriage.</p>
+                <div style= {styles.para} className="col s9 m9 l9 center">
+                    <p style= {styles.parat} className="paragraphs">There are only three ways to make this work. The first is to let me take care of everything. The second is for you to take care of everything. The third is to split everything 50 / 50. I think the last option is the most preferable, but I'm certain it'll also mean the end of our marriage.</p>
                 </div>
 
                 <div className="col s12 m12 l12 center">
