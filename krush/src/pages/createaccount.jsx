@@ -32,9 +32,11 @@ const CreateAccount = () => {
         aboutMe: formState.aboutMe
       },
     });
-    const sunsign = formState.signSun
+    const email = formState.email;
+    const sunsign = formState.signSun;
     const token = mutationResponse.data.addUser.token;
     Auth.login(token);
+    localStorage.setItem('email', email)
     localStorage.setItem('sunsign', sunsign)
     localStorage.getItem(sunsign)
   };
