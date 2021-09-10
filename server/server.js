@@ -8,7 +8,7 @@ const { authMiddleware } = require('./utils/auth');
 require("dotenv").config()
 
 const app = express();
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 3000;
 const server = new ApolloServer({
   typeDefs,
   resolvers,
@@ -28,7 +28,7 @@ if (process.env.NODE_ENV === 'production') {
   
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, '../krush/public/index.html'));
-});
+}); 
 
 // // Step 1:
 // app.use(express.static(path.resolve(__dirname, "./client/build")));
