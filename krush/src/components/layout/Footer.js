@@ -47,14 +47,19 @@ const Footer = () => {
             //               <li><a href="/contact">Contact Us</a></li>
 	        <footer style= {styles.footer}>
 		        <nav> 
-			        <div class="nav-wrapper deep-purple lighten-1">
+			        <div class="nav-wrapper deep-purple lighten-1 ">
 				        <ul class="right">
-					        <li><a class= "col"href="https://github.com/Pro-Three/Astrolove/tree/main"> <FaGithub  size={30}/> </a></li>
+					        {/* <li><a class= "col"href="https://github.com/Pro-Three/Astrolove/tree/main"> <FaGithub  size={30}/> </a></li> */}
 				        </ul>
-                             <p>&copy; Copyright. All Rights Reserved</p>
+                             <p class="flow-text center" style={{fontSize: "20px"}}>&copy; Copyright. All Rights Reserved</p>
+                             {/* <p class="flow-text center">&copy; Copyright. All Rights Reserved</p> */}
+
 			        </div>
 		        </nav>
 	        </footer>
+            // <footer class="section deep-purple lighten-1 white-text right" style= {styles.footer}>
+            //     <p class="flow-text">&copy; Copyright. All Rights Reserved</p>
+            // </footer>
     )
 }
 

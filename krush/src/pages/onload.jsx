@@ -14,7 +14,7 @@ const styles = {
 
 const OnLoad = () => {
     return (
-  <div class="carousel carousel-slider" style={{height: "84vh"}}>
+      <div class="carousel carousel-slider" style={{height: "84vh"}}>
     <div class="carousel-fixed-item">
       <div class="container">
         <h1 class="white-text">Welcome Superstar</h1>
