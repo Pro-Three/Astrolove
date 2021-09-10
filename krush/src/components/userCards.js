@@ -8,17 +8,28 @@ import userProfilePic from '../img/generic-background.jpeg'
 // StackOverflow link:  https://stackoverflow.com/a/34842797/16407707
 const hashCode = s => s.split('').reduce((a,b) => (((a << 5) - a) + b.charCodeAt(0))|0, 0) 
 
+const styles= {
+    container: {
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        marginBottom: '30px'
+    }
+
+}
+
 const UserCard = ({ allUsers }) => {
     if (!allUsers) {
         return (
-            <h3>NO USERS YET</h3>
+            <h3 className="center">NO USERS YET</h3>
         );
     }
     console.log('userCards COMPONENT - allUsers:  ', allUsers);
 
     return (
-        <div className="row">
-            <div className="col s12 m7">
+        <div style= {styles.container} className="container">
+        <div className="row center">
+            <div className="col s12 m7 l12">
             {allUsers && allUsers.map((allUsers) => (
                 <div className="card" id={allUsers._id} key={allUsers._id} >
                     <div className="card mb-3">
@@ -45,6 +56,7 @@ const UserCard = ({ allUsers }) => {
                 </div>
             ))}
             </div>
+        </div>
         </div>
     );
 };

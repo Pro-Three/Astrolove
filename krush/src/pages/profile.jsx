@@ -40,18 +40,6 @@ function MyImageComponent() {
 const Profile = () => {
     const [{ currentUser }, { setCurrentUser }] = useUserContext();
     const userEmail = localStorage.getItem('email')
-<<<<<<< HEAD
-    const { data, loading, error } = useQuery(QUERY_USER, {
-        variables: { email: userEmail}
-   });
-    console.log('CURRENT USER (state) (profile):  ', currentUser);
-    
-    // const queryResponse = user({
-    //      variables: { email: userEmail}
-    // });
-    
-    console.log('PROFILE - USER INFO - data.user:  ', data)
-=======
     console.log('PROFILE - from localStorage - EMAIL:  ', userEmail)
     const { data, loading, error } = useQuery(QUERY_USER, {
         variables: { email: userEmail}
@@ -59,7 +47,6 @@ const Profile = () => {
     // console.log('CURRENT USER (state) (profile):  ', currentUser);
     // console.log('PROFILE - USER INFO - error', error)
     // console.log('PROFILE - USER INFO - data.user:  ', data.user)
->>>>>>> 3151dd2ad9e3a49d171dd2768937e1b04e0a195f
     
 
     return (

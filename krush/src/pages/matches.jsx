@@ -38,12 +38,12 @@ const Matches = () => {
     return (
         <div className="container z-depth-2">
             <div className="row grey lighten-3">
-                <h3 className="center">Match Name</h3>
+                {/* <h3 className="center">Match Name</h3>
                 <div className="col s6 m6 l6">
                     <Suspense fallback={<div>Loading</div>}>
                         <MyImageComponent />
                     </Suspense>
-                </div>
+                </div> */}
                 <div>
                     {/* {usersData.map((data) => {
                         <UserCard />
