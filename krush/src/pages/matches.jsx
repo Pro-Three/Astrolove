@@ -52,7 +52,6 @@ const Matches = () => {
                         <UserCard
                         // thoughts={thoughts}
                         allUsers={allUsers}
-                        title="USER NAME HERE"
                     />
                     )}
                 </div>
