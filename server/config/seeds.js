@@ -139,7 +139,8 @@ db.once('open', async () => {
       signSun: 'Pisces',
       gender: 'Male',
       desiredRelationshipPref: 'Just friends',
-      aboutMe: 'I\'m a Pisces who likes to party!  Looking to the stars for a strong Capricorn or Taurus to have fun with!'
+      aboutMe: 'I\'m a Pisces who likes to party!  Looking to the stars for a strong Capricorn or Taurus to have fun with!',
+      likes: [ {_id: "6139157fbd2ced4b7dc89be0"} ]
   });
 
   await User.create({
@@ -151,8 +152,35 @@ db.once('open', async () => {
     signSun: 'Capricorn',
     gender: 'Genderqueer',
     desiredRelationshipPref: 'Open to dating',
-    aboutMe: 'Living, loving, laughing, 100% Capricorn.  I get along with all signs, JUST NO F-BOI\'S!'
-});
+    aboutMe: 'Living, loving, laughing, 100% Capricorn.  I get along with all signs, JUST NO F-BOI\'S!',
+    likes: []
+  });
+
+  await User.create({
+    username: 'tridestiny',
+    firstName: 'Trinity',
+    lastName: 'Caldera',
+    email: 'trinitycal@geocities.com',
+    password: '!QAZ1qaz',
+    signSun: 'Leo',
+    gender: 'Female',
+    desiredRelationshipPref: 'Friends with benefits',
+    aboutMe: '"Some people come into our lives and quickly go. Some stay for awhile and leave footprints on our hearts and we are never the same." -- Aaliyah',
+    likes: []
+  });
+
+  await User.create({
+    username: 'ugogurl09',
+    firstName: 'Angelina',
+    lastName: 'Finestar',
+    email: 'queenangel@hotmail.com',
+    password: '!QAZ1qaz',
+    signSun: 'Libra',
+    gender: 'Female',
+    desiredRelationshipPref: 'Open to dating',
+    aboutMe: 'Love to love.  Hate to hate.  Come at me Gemini\'s! 😛',
+    likes: []
+  });
 
   console.log('Users have been seeded');
 

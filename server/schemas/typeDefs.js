@@ -12,6 +12,8 @@ const typeDefs = gql`
     gender: String
     desiredRelationshipPref: String
     aboutMe: String
+    likes: [String]
+
   }
 
   type Auth {

@@ -7,6 +7,7 @@ const resolvers = {
     users: async (parent, args, context) => {
     
       const users = await User.find();
+      console.log('RESOLVERS - QUERY - users:  ', users)
       return users;
     },
     user: async (parent, args, context) => {
