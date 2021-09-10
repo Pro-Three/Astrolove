@@ -8,7 +8,7 @@ const { authMiddleware } = require('./utils/auth');
 require("dotenv").config()
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 5000;
 const server = new ApolloServer({
   typeDefs,
   resolvers,
