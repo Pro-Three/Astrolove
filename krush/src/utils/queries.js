@@ -12,6 +12,23 @@ export const QUERY_USER = gql`
       gender
       desiredRelationshipPref
       aboutMe
+      likes
+    }
+  }
+`;
+
+export const QUERY_ALL_USERS = gql`
+  query users {
+    users {
+        _id
+        username
+        email
+        firstName
+        lastName
+        signSun
+        gender
+        desiredRelationshipPref
+        aboutMe
     }
   }
 `;
