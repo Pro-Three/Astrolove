@@ -11,6 +11,7 @@ import {
   createHttpLink,
 } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
+import UserProvider from './utils/UserContext';
 
 // Components
 import Navbar from './components/layout/navbar';
@@ -62,35 +63,37 @@ function App() {
   return (
     <ApolloProvider client={client}>
       <Router>
-        <div>
-          <Navbar />
-            {/* <Switch> */}
-              {/* NAVBAR */}
+        <UserProvider>
+          <div>
+            <Navbar />
+              {/* <Switch> */}
+                {/* NAVBAR */}
 
-              {/* LOGIN */}
-              <Route path="/aboutus" exact component={AboutUs} />
-              <Route path="/onload" exact component={OnLoad} />
-              <Route path="/login" exact component={Login} />
-              <Route path="/createaccount" exact component={CreateAccount} />
+                {/* LOGIN */}
+                <Route path="/onload" exact component={OnLoad} />
+                <Route path="/login" exact component={Login} />
+                <Route path="/createaccount" exact component={CreateAccount} />
 
 
-              {/* LOGGED IN */}
-              <Route path="/" exact component={Dashboard} />
-              <Route path="/chats" exact component={Chats} />
-              <Route path="/profile" exact component={Profile} />
-              <Route path="/onlook" exact component={OnLook} />
-              <Route path="/matches" exact component={Matches} />
-              <Route path="/logout" exact component={Logout} />
+                {/* LOGGED IN */}
+                <Route path="/" exact component={Dashboard} />
+                <Route path="/chats" exact component={Chats} />
+                <Route path="/profile" exact component={Profile} />
+                <Route path="/onlook" exact component={OnLook} />
+                <Route path="/matches" exact component={Matches} />
+                <Route path="/logout" exact component={Logout} />
 
-              {/*  */}
-              {/*  */}
+                {/*  */}
+                {/*  */}
 
-              {/* Footer */}
-              <Route path="/contact" exact component={Contact} />
-      
-            { /*</Switch>*/ }
-          <Footer />
-        </div>
+                {/* Footer */}
+                <Route path="/aboutus" exact component={AboutUs} />
+                <Route path="/contact" exact component={Contact} />
+        
+              { /*</Switch>*/ }
+            <Footer />
+          </div>
+        </UserProvider>
       </Router>
     </ApolloProvider>
   );
