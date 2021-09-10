@@ -51,7 +51,7 @@ const Matches = () => {
                     ) : (
                         <UserCard
                         // thoughts={thoughts}
-                        user={allUsers}
+                        allUsers={allUsers}
                         title="USER NAME HERE"
                     />
                     )}

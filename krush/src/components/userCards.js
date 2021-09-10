@@ -2,11 +2,12 @@ import React from 'react';
 import 'materialize-css';
 
 const UserCard = ({ allUsers, title }) => {
-    if (!allUsers) {
-        return (
-            <h3>NO USERS YET</h3>
-        );
-    }
+    // if (!allUsers) {
+    //     return (
+    //         <h3>NO USERS YET</h3>
+    //     );
+    // }
+    console.log('userCards COMPONENT - allUsers:  ', allUsers);
 
     return (
         <div className="row">
