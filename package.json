@@ -2,7 +2,7 @@
   "name": "krushinator",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "index.html",
   "scripts": {
     "start": "--kill-others-on-fail cd server && npm start",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install && npm run build",
