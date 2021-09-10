@@ -1,5 +1,8 @@
-import React, { Component } from 'react'
+import React from 'react'
 import '../chat.css';
+import me from '../img/aries.jpg'
+import me2 from '../img/virgo.jpg'
+
 
 const Chats = () => {
   return (
@@ -7,10 +10,10 @@ const Chats = () => {
 
 <div className="container cyan accent-4">
     <div class="menu">
-            <div class="back"><i class="fa fa-chevron-left"></i> <img src="https://i.imgur.com/DY6gND0.png" draggable="false"/></div>
-            <div class="name" >Hamlet</div>
-            <div class="last">18:09</div>
+          <div class="back"><i class="fa fa-chevron-left"></i> <img src={me} draggable="false"/></div>
+            <div class="name">Hamlet</div>
         </div>
+
     <ol class="chat">
     <li class="other">
         <div class="avatar"><img src="https://i.imgur.com/DY6gND0.png" draggable="false"/></div>
@@ -21,10 +24,10 @@ const Chats = () => {
       </div>
     </li>
     <li class="self">
-        <div class="avatar"><img src="https://i.imgur.com/HYcn9xO.png" draggable="false"/></div>
+        <div class="avatar"><img src={me2} draggable="false"/></div>
       <div class="msg">
-        <p>William</p>
-        <p>Hey what's up</p>
+        <h6 style={{textDecoration: 'underline'}}>William</h6>
+        <p>Hey what's up!</p>
         <p>I have to study for my React class... <emoji class="books"/></p>
         <p>Maybe another day</p>
         <time>September 8th, 2021</time>
@@ -40,6 +43,8 @@ const Chats = () => {
     <li class="self">
         <div class="avatar"><img src="https://i.imgur.com/HYcn9xO.png" draggable="false"/></div>
       <div class="msg">
+      <h6 style={{textDecoration: 'underline'}}>William</h6>
+
         <p>Dude you can't always believe what the internet tells you</p>
         <time>September 8th, 2021</time>
       </div>
@@ -56,7 +61,9 @@ const Chats = () => {
         <div class="avatar"><img src="https://i.imgur.com/HYcn9xO.png" draggable="false"/></div>
       <div class="msg">
         <img src="https://i.imgur.com/QAROObc.jpg" draggable="false"/>
-        <p>That's super accurate no lie</p>
+        <h6 style={{textDecoration: 'underline'}}>William</h6>
+
+        <p>That's super accurate bro no lie</p>
         <p>Dude read mine!!</p>
         <time>September 8th, 2021</time>
       </div>
