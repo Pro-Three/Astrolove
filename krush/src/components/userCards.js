@@ -51,7 +51,7 @@ const UserCard = ({ allUsers }) => {
                     </div>
                     <div className="card-action">
                         {/*TO DO:  make 'Like" button work correctly */}
-                        <a href="#">Like</a>
+                        <a href="#" className="waves-effect waves-light btn deep-purple lighten-1 btn-medium">Like</a>
                     </div>
                 </div>
             ))}
