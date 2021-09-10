@@ -1,6 +1,11 @@
 import React, { Suspense } from 'react';
+import { useUserContext } from '../utils/UserContext';
 import { useImage } from 'react-image';
 import '../time.css';
+import { useQuery } from '@apollo/client';
+import { QUERY_USER } from '../utils/queries';
+import { get } from 'http';
+// const userEmail = localStorage.getItem()
 
 function MyImageComponent() {
     const {src} = useImage({
@@ -31,11 +36,22 @@ function MyImageComponent() {
     otherList: {
         fontSize: '125%'
     }
-
-    
 }
 
 const Profile = () => {
+    const [{ currentUser }, { setCurrentUser }] = useUserContext();
+    const userEmail = localStorage.getItem('EMAIL')
+    const { data, loading, error } = useQuery(QUERY_USER, {
+        variables: { email: userEmail}
+   });
+    console.log('CURRENT USER (state) (profile):  ', currentUser);
+    
+    // const queryResponse = user({
+    //      variables: { email: userEmail}
+    // });
+    console.log('PROFILE - USER INFO - data.user:  ', data)
+    
+
     return (
         <div>
         <div class="clock">
@@ -60,6 +76,8 @@ const Profile = () => {
                 <div style= {styles.otherList} className="col s6 l6 m6 left" id="Name">
                     <ul>
                         <li>Name:</li>
+                        <li>Email:</li>
+                        <li>Display Name:</li>
                         <li>Sun Sign:</li>
                         <li>Gender:</li>
                         <li>Desired Relationship Preference:</li>
@@ -67,14 +85,16 @@ const Profile = () => {
                 </div>
                 <div style= {styles.otherList} className="col s6 l6 m6 left" id="Name">
                     <ul>
-                        <li>User's Name</li>
-                        <li>User's Sun Sign</li>
-                        <li>Gender</li>
-                        <li>Desired Relationship Preference</li>
+                        <li>{data.user.firstName} {data.user.lastName}</li>
+                        <li>{data.user.email}</li>
+                        <li>{data.user.username}</li>
+                        <li>{data.user.signSun}</li>
+                        <li>{data.user.gender}</li>
+                        <li>{data.user.desiredRelationshipPref}</li>
                     </ul>
                 </div>
                 <div className="col s12 m6 l6 center push-l3">
-                    <p>The song came from the bathroom belting over the sound of the shower's running water. It was the same way each day began since he could remember. It listened intently and concluded that the singing today was as terrible as it had ever been.</p>
+                    <p>{data.user.aboutMe}</p>
                 </div>
             </div>
         </div>

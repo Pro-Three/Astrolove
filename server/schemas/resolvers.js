@@ -8,6 +8,11 @@ const resolvers = {
     
       const users = await User.find();
       return users;
+    },
+    user: async (parent, args, context) => {
+      const user = await User.findOne({ email: args.email })
+      console.log(`args.username`, user)
+      return user;
     }
   },
   Mutation: {
@@ -26,6 +31,7 @@ const resolvers = {
     },
     login: async (parent, { email, password }) => {
       const user = await User.findOne({ email });
+      console.log('user (from resolver):  ', user)
 
       if (!user) {
         throw new AuthenticationError('Incorrect credentials');
