@@ -8,6 +8,7 @@ function Login(props) {
   const [formState, setFormState] = useState({ email: '', password: '' });
   const [login, { error }] = useMutation(LOGIN);
 
+
   const handleFormSubmit = async (event) => {
     event.preventDefault();
     console.log('EMAIL:  ', formState.email)
@@ -21,7 +22,10 @@ function Login(props) {
     } catch (e) {
       console.log(e);
     }
+    localStorage.setItem('EMAIL', formState.email);
+    localStorage.getItem('EMAIL')
   };
+
 
   const handleChange = (event) => {
     const { name, value } = event.target;

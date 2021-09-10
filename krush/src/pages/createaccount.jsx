@@ -6,10 +6,12 @@ import Auth from '../utils/auth';
 import { ADD_USER } from '../utils/mutations';
 
 
+
 document.addEventListener('DOMContentLoaded', function() {
   var elems = document.querySelectorAll('select');
   var instances = Select.FormSelect.init(elems);
 });
+
 
 const CreateAccount = () => {
   const [formState, setFormState] = useState({ email: '', password: '' });
@@ -26,14 +28,20 @@ const CreateAccount = () => {
         lastName: formState.lastName,
         signSun: formState.signSun,
         gender: formState.gender,
-        desiredRelationshipPref: formState.relationshipPref
+        desiredRelationshipPref: formState.relationshipPref,
+        aboutMe: formState.aboutMe
       },
     });
+    const email = formState.email;
+    const sunsign = formState.signSun;
     const token = mutationResponse.data.addUser.token;
     Auth.login(token);
+    localStorage.setItem('email', email)
+    localStorage.setItem('sunsign', sunsign)
+    localStorage.getItem(sunsign)
   };
-
   const handleChange = (event) => {
+    console.log(formState.signSun)
     const { name, value } = event.target;
     setFormState({
       ...formState,
@@ -188,6 +196,22 @@ const CreateAccount = () => {
               <label for="desiredRelationshipPreference">Desired Relationship Preference</label>
             </div>
           </div>
+          <div className="row">
+            <form>
+              <div className="input-field col s12">
+                <i className="material-icons prefix">description</i>
+                <textarea
+                  name="aboutMe"
+                  id="aboutMe"
+                  className="materialize-textarea"
+                  data-length="240"
+                  onChange={handleChange}
+                >
+                </textarea>
+                <label for="aboutMe">About Me</label>
+              </div>
+            </form>
+          </div>
           <div className="row center-align">
             <button className="waves-effect waves-light btn deep-purple lighten-1 btn-medium" type="submit" name="action">Submit
               <i className="material-icons right">assignment_ind</i>
@@ -200,6 +224,6 @@ const CreateAccount = () => {
   </div>
 </div>
     )
-}
+};
 
-export default CreateAccount
+export default CreateAccount;

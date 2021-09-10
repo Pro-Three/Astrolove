@@ -1,11 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom'
+ 
 
+
+
+const sunsign = localStorage.getItem("sunsign")
+console.log(sunsign)
 const options = {
   method: 'POST',
   url: 'https://sameer-kumar-aztro-v1.p.rapidapi.com/',
-  params: {sign: 'capricorn', day: 'today'},
+  params: {sign: sunsign, day: 'today'},
   headers: {
     'x-rapidapi-host': 'sameer-kumar-aztro-v1.p.rapidapi.com',
     'x-rapidapi-key': process.env.REACT_APP_RAPID_API_KEY
@@ -24,19 +29,22 @@ const styles = {
 }
 
 const Dashboard = () => {
+  const [showhoro, setshowhoro] = useState(true);
+
     const Daily = () =>axios.request(options).then(function (response) {
-      
-        console.log(response.data.description);
+      setshowhoro(!showhoro);
+     //const [horoscope, sethoroscope] = setState(response.data.description)
+     localStorage.setItem('horoscope', response.data.description);
+      console.log(response.data.description);
    }).catch(function (error) {
         console.error(error);
     });
-
+   const horoscope = localStorage.getItem('horoscope');
     return (
         <div className="container z-depth-2">
             <div className="row grey lighten-3">
 
             <h3 className="col s12 m12 l12">Dashboard</h3>
-            
             <div className="col s12 m12 l12">
             <Link to='/onlook'>
             <button style= {styles.button} className="newMatchesBtn right waves-effect waves-light btn deep-purple lighten-1 btn-medium" id="newMatchesBtn">Find New Matches</button>
@@ -44,6 +52,7 @@ const Dashboard = () => {
             </div>
             <div className="col s12 m12 l12">
             <button style= {styles.button} className="dailyScope right waves-effect waves-light btn deep-purple lighten-1 btn-medium" id="dailyScope" onClick={Daily}>Daily Horoscope</button>
+            { !showhoro ? <h4 className="col s12 m12 l12">{horoscope}</h4> : "" }
             </div>
             <div className="col s12 m12 l12">
             <button style= {styles.button} className="monthlyScope right waves-effect waves-light btn deep-purple lighten-1 btn-medium" id="monthlyScope">Monthly</button>

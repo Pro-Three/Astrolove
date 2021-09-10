@@ -14,11 +14,11 @@ const styles = {
 
 const OnLoad = () => {
     return (
-  <div class="carousel carousel-slider">
+  <div class="carousel carousel-slider" style={{height: "84vh"}}>
     <div class="carousel-fixed-item">
       <div class="container">
-        <h1 class="white-text">Astro Love</h1>
-        <a class="waves-effect waves-light btn deep-purple lighten-1 btn-medium" href="/login" target="_blank">LOGIN Starchild</a>
+        <h1 class="white-text">Welcome Superstar</h1>
+        <a class="waves-effect waves-light btn deep-purple lighten-1 btn-medium" href="/login" target="_blank">LOGIN</a>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <a class="waves-effect waves-light btn deep-purple lighten-1 btn-medium" href="/createaccount" target="_blank">CREATE Account</a>
       </div>
