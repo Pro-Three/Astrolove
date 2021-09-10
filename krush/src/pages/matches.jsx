@@ -12,6 +12,9 @@ const styles = {
         marginRight: '5px',
         padding: "auto"
     },
+    otherList: {
+        fontSize: '150%'
+    }
 }
 
 function MyImageComponent() {
@@ -33,15 +36,17 @@ const Matches = () => {
                     </Suspense>
                 </div> 
 
-                <div className="col s3 m3 l3">
-                    <h4>Match Sign:</h4>
-                    <h5 className="center">Leo!</h5>
-                    <h5 className="center">♌️</h5>
-                    <h4>Match Score:</h4>
-                    <h5 className="center">90%</h5>
+                <div style= {styles.otherList} className="col s3 m3 l3 center">
+                    
+                    <ul>
+                        <li>User's Sun Sign</li>
+                        <li>User's Sun Sign Symbol</li>
+                        <li>Gender</li>
+                        <li>Desired Relationship Preference</li>
+                    </ul>
                 </div>
                 <div className="col s3 m3 l3">
-                    <p className="paragraphs">Something about the people like profiles, likes, etc.</p>
+                    <p className="paragraphs">It was a scrape that he hardly noticed. Sure, there was a bit of blood but it was minor compared to most of the other cuts and bruises he acquired on his adventures. There was no way he could know that the rock that produced the cut had alien genetic material on it that was now racing through his bloodstream. He felt perfectly normal and continued his adventure with no knowledge of what was about to happen to him.</p>
                 </div>
                 
                 <div className="col s12 m12 l12 center">
