@@ -1,14 +1,11 @@
 // import React, { useEffect } from 'react';
 // import { Widget, addResponseMessage } from 'react-chat-widget';
 
-<<<<<<< HEAD
-const AboutUs = () => {
-    return (
-        <div className="container z-depth-2">
-            <div className="row grey lighten-3">
-=======
+// const AboutUs = () => {
+//     return (
+//         <div className="container z-depth-2">
+//             <div className="row grey lighten-3">
 // import 'react-chat-widget/lib/styles.css';
->>>>>>> 0f088f7c73969595bd0d16132c82a4c84ea3d11b
 
 // import me from '../img/virgo.jpg'
 

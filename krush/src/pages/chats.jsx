@@ -2,17 +2,6 @@ import React, { Component } from 'react'
 import '../chat.css';
 
 const Chats = () => {
-<<<<<<< HEAD
-    return (
-        
-        <div className="container z-depth-2">
-            <div className="row grey lighten-3">
-
-            <h3 className="center">You talk here</h3>
-            
-
-            </div>
-=======
   return (
     <div className="container">
 
@@ -21,7 +10,6 @@ const Chats = () => {
             <div class="back"><i class="fa fa-chevron-left"></i> <img src="https://i.imgur.com/DY6gND0.png" draggable="false"/></div>
             <div class="name" >Hamlet</div>
             <div class="last">18:09</div>
->>>>>>> 0f088f7c73969595bd0d16132c82a4c84ea3d11b
         </div>
     <ol class="chat">
     <li class="other">
