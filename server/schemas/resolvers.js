@@ -10,7 +10,7 @@ const resolvers = {
       return users;
     },
     user: async (parent, args, context) => {
-      const user = await User.findOne({ username: args.username })
+      const user = await User.findOne({ email: args.email })
       console.log(`args.username`, user)
       return user;
     }
