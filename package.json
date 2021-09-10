@@ -12,6 +12,10 @@
     "seed": "cd server && npm run seed",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "engines": {
+    "node": "16.x",
+    "npm": "6.14.7"
+  },
 
   "repository": {
     "type": "git",
