@@ -1,4 +1,4 @@
-import { useSubscription } from '@apollo/client';
+// import { useSubscription } from '@apollo/client';
 import React, { Suspense } from 'react';
 import { useImage } from 'react-image';
 import UserCard from '../components/userCards';
@@ -6,17 +6,17 @@ import { useQuery } from '@apollo/client';
 import { QUERY_ALL_USERS, QUERY_USER } from '../utils/queries';
 
 
-const styles = {
-    button: {
-        width: '150px',
-        height: '35px',
-        color: 'white',
-        marginTop: '10px',
-        marginBottom: '10px',
-        marginRight: '5px',
-        padding: "auto"
-    },
-}
+// const styles = {
+//     button: {
+//         width: '150px',
+//         height: '35px',
+//         color: 'white',
+//         marginTop: '10px',
+//         marginBottom: '10px',
+//         marginRight: '5px',
+//         padding: "auto"
+//     },
+// }
 
 function MyImageComponent() {
     const {src} = useImage({

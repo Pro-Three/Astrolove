@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import 'materialize-css';
-import { useQuery } from '@apollo/client';
-import { QUERY_USER } from '../utils/queries';
+// import { useQuery } from '@apollo/client';
+// import { QUERY_USER } from '../utils/queries';
 import userProfilePic from '../img/generic-background.jpeg'
 
 // Temporary Hashing for list items to avoid package installation (at the moment)
@@ -10,6 +10,17 @@ import userProfilePic from '../img/generic-background.jpeg'
 // StackOverflow link:  https://stackoverflow.com/a/34842797/16407707
 const hashCode = s => s.split('').reduce((a,b) => (((a << 5) - a) + b.charCodeAt(0))|0, 0) 
 
+const styles = {
+    button: {
+        width: '150px',
+        height: '35px',
+        color: 'white',
+        marginTop: '10px',
+        marginBottom: '10px',
+        marginRight: '5px',
+        padding: "auto"
+    },
+}
 
 const UserCard = ({ allUsers }) => {
     const [likesCollection, setLikes] = useState([]);
@@ -62,7 +73,8 @@ const UserCard = ({ allUsers }) => {
                     </div>
                     <div className="card-action">
                         {/*TO DO:  make 'Like" button work correctly */}
-                        <a href="#" name={allUsers._id} onClick={handleUpdateLikes}>Like</a>
+                        <button style= {styles.button} name={allUsers._id} onClick={handleUpdateLikes}>Like</button>
+                        {/* <a href="#" name={allUsers._id} onClick={handleUpdateLikes}>Like</a> */}
                         {/* <a href="#">Like</a> */}
                     </div>
                 </div>
