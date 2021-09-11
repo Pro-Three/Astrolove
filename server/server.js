@@ -28,6 +28,12 @@ app.get('/*', (req, res) => {
   res.sendFile(path.join(__dirname, '../krush/public/index.html'));
 });
 
+app.use((req, res, next) => {
+  const error = new Error("Not found");
+  error.status = 404;
+  next(error);
+});
+
 // app.listen(PORT, () => {
 //   console.log(`API server running on port ${PORT}!`);
 //   // log where we can go to test our GQL API
