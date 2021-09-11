@@ -10,6 +10,7 @@ import { ADD_USER } from '../utils/mutations';
 document.addEventListener('DOMContentLoaded', function() {
   var elems = document.querySelectorAll('select');
   var instances = Select.FormSelect.init(elems);
+  console.log(instances);
 });
 
 

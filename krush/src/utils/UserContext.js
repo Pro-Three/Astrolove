@@ -1,6 +1,6 @@
-import { useQuery } from '@apollo/client';
-import React, { useState, createContext, useContext } from 'react';
-import { QUERY_USER } from '../utils/queries';
+// import { useQuery } from '@apollo/client';
+import React, { useState, useContext } from 'react';
+// import { QUERY_USER } from '../utils/queries';
 
 export const UserContext = React.createContext();
 export const useUserContext = () => useContext(UserContext);

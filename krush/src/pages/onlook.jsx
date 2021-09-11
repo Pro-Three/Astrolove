@@ -6,7 +6,7 @@ function MyImageComponent() {
       srcList: 'https://cdn.theatlantic.com/media/mt/science/cat_caviar.jpg',
     })
 
-    return <img src={src} />
+    return <img src={src} alt="done"/>
 }
 
 const styles = {

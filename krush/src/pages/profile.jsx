@@ -4,7 +4,7 @@ import { useImage } from 'react-image';
 import '../time.css';
 import { useQuery } from '@apollo/client';
 import { QUERY_USER } from '../utils/queries';
-import { get } from 'http';
+// import { get } from 'http';
 // const userEmail = localStorage.getItem()
 
 function MyImageComponent() {
@@ -12,7 +12,7 @@ function MyImageComponent() {
       srcList: 'https://cdn.theatlantic.com/media/mt/science/cat_caviar.jpg',
     })
 
-    return <img src={src} />
+    return <img src={src} alt="done"/>
 }
 
   const styles = {
@@ -40,11 +40,12 @@ function MyImageComponent() {
 
 const Profile = () => {
     const [{ currentUser }, { setCurrentUser }] = useUserContext();
-    const userEmail = localStorage.getItem('EMAIL')
+    console.log(currentUser, setCurrentUser)
+    const userEmail = localStorage.getItem('email')
     const { data, loading, error } = useQuery(QUERY_USER, {
         variables: { email: userEmail}
     });
-    
+    console.log(loading, error)
     return (
         <div>
         <div class="clock">

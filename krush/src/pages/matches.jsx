@@ -23,7 +23,7 @@ function MyImageComponent() {
       srcList: 'https://cdn.theatlantic.com/media/mt/science/cat_caviar.jpg',
     })
 
-    return <img src={src} />
+    return <img src={src} alt="done"/>
 }
 
 const Matches = () => {
@@ -32,10 +32,11 @@ const Matches = () => {
     console.log(error);
     const allUsers = data?.users || [];
     console.log('MATCHES - allUsers:  ', allUsers);
-    const userEmail = localStorage.getItem('EMAIL');
+    const userEmail = localStorage.getItem('email');
     const { data: currentUId, loading: currentUserQuery, error: currentUserQueryError } = useQuery(QUERY_USER, {
         variables: { email: userEmail }
     });
+    console.log(currentUserQuery, currentUserQueryError)
     console.log('MATCHES - currentUId', currentUId?.user._id)
     localStorage.setItem('id', currentUId?.user._id);
 
