@@ -40,7 +40,7 @@ function MyImageComponent() {
 
 const Profile = () => {
     const [{ currentUser }, { setCurrentUser }] = useUserContext();
-    const userEmail = localStorage.getItem('email')
+    const userEmail = localStorage.getItem('EMAIL')
     const { data, loading, error } = useQuery(QUERY_USER, {
         variables: { email: userEmail}
     });

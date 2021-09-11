@@ -12,30 +12,21 @@ const hashCode = s => s.split('').reduce((a,b) => (((a << 5) - a) + b.charCodeAt
 
 
 const UserCard = ({ allUsers }) => {
-    const userEmail = localStorage.getItem('EMAIL');
-    const { data, loading, error } = useQuery(QUERY_USER, {
-        variables: { email: userEmail }
-    });
-    localStorage.setItem('id', data.user.id);
-    // console.log('UserCard - localStorage:  ', localStorage.getItem('EMAIL'))
-    // console.log('UserCard - data.user:  ', data)
-    // setCurrentUserId(currentUserIdState)
+    const [likesCollection, setLikes] = useState([]);
 
     const handleUpdateLikes = async (event) => {
         event.preventDefault();
-        console.log('UserCard - data.user.id:  ', data?.user.id)
-        // setCurrentUserId(data?.user.id)
-        // setLikes(event.target.id);
-        console.log('UserCard - event.target.value:  ', event.target.name)
+        console.log('UserCard - data.user.id:  ', localStorage.getItem('id'))
+        console.log('UserCard - event.target.name:  ', event.target.name)
         // setLikes(likeBucket => [...likeBucket, event.target.value])
 
-        // this.seLikes
-        // console.log('UserCard - setLikes:  ', likeBucket)
-        // if (!data.user.id) {
-        //     return;
-        // }
-        // const newLike = [...likeBucket, event.target.value]
-        // console.log('UseCard - newLike:  ', newLike)
+        if (!localStorage.getItem('id')) {
+            return;
+        }
+        const newLike = [...likesCollection, event.target.name];
+        console.log('UseCard - newLike:  ', newLike);
+        setLikes(newLike);
+        console.log('LIKE STATE:  ', likesCollection)
 
     
     } 
@@ -72,6 +63,7 @@ const UserCard = ({ allUsers }) => {
                     <div className="card-action">
                         {/*TO DO:  make 'Like" button work correctly */}
                         <a href="#" name={allUsers._id} onClick={handleUpdateLikes}>Like</a>
+                        {/* <a href="#">Like</a> */}
                     </div>
                 </div>
             ))}

@@ -182,6 +182,19 @@ db.once('open', async () => {
     likes: []
   });
 
+  await User.create({
+    username: 'koolkeith',
+    firstName: 'Keith',
+    lastName: 'Dennis',
+    email: 'kd55910@gmail.com',
+    password: '!QAZ1qaz',
+    signSun: 'Taurus',
+    gender: 'Male',
+    desiredRelationshipPref: 'Open to dating',
+    aboutMe: 'I want to get to know you. Hit me up.  This Taurus knows how to love.',
+    likes: []
+  });
+
   console.log('Users have been seeded');
 
   process.exit();
