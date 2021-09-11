@@ -2,6 +2,7 @@
 
 This is an astrology dating site that matches users based on their sun signs. 
 
+<<<<<<< HEAD
 ## Table of Contents 
 
  [Description](#Description)
@@ -25,6 +26,48 @@ Astrolove is the newest dating site. It matches users based on their sunsign com
    * [William Crews](https://github.com/lordozland)
    * [Hamlet Valladeres](https://github.com/UNCValladaresHamlet)
    * [Lesley Moore](https://github.com/lesleymoore)
+=======
+This is an astrology dating site that matches users based on their sun signs. The users will be able to view their horoscope. 
+
+## Table of Contents 
+
+ [Description](#Description)
+ [Installation](#Installation)
+ [Usage](#Usage)
+ [Tests](#Tests)
+ 
+ [Preview](#Preview)
+ [Contributors](#Contributors)
+ [License](#License)
+ [Questions](#Questions)
+
+ ## Description
+
+ This application was built to provide the user a quick to build a professional README through their terminal using node.js. Through answering a few questions in the terminal the application will build a new README for the user using the answers provided. 
+
+ ## Installation 
+
+
+
+ ## Usage 
+
+
+
+ ## Test 
+
+ 
+
+ ## Preview
+
+ [Astolove Site]()
+
+ ## Contributors 
+
+   * [Bryan Civils]()
+   * [William Crews]()
+   * [Hamlet Valladeres]()
+   * [Lesley Moore]()
+>>>>>>> 3151dd2ad9e3a49d171dd2768937e1b04e0a195f
 
  ## License
 

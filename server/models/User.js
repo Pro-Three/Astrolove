@@ -45,6 +45,15 @@ const userSchema = new Schema({
     required: false,
     // enum: ["woman", "man", "non-binary", "transgender", "intersex", "Two Spirit", "gender non-conforming", "Other"]
   },
+  aboutMe: {
+    type: String,
+    required: false,
+    maxLength: 240
+  },
+  likes: {
+    type: Array,
+    required: false
+  }
 });
 
 // set up pre-save middleware to create password

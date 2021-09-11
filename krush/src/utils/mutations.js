@@ -6,6 +6,14 @@ export const LOGIN = gql`
       token
       user {
         _id
+        username
+        email
+        firstName
+        lastName
+        signSun
+        gender
+        desiredRelationshipPref
+        aboutMe
       }
     }
   }
@@ -32,7 +40,8 @@ export const ADD_USER = gql`
     $firstName: String,
     $lastName: String!,
     $gender: String!,
-    $desiredRelationshipPref: String
+    $desiredRelationshipPref: String,
+    $aboutMe: String
   ) {addUser(
   	  username: $username,
       email: $email,
@@ -41,7 +50,8 @@ export const ADD_USER = gql`
       firstName: $firstName,
       lastName: $lastName,
       gender: $gender,
-      desiredRelationshipPref: $desiredRelationshipPref
+      desiredRelationshipPref: $desiredRelationshipPref,
+      aboutMe: $aboutMe
   ) {
     token
     user{
@@ -53,6 +63,7 @@ export const ADD_USER = gql`
       lastName
       gender
       desiredRelationshipPref
+      aboutMe
     }
   }
 }

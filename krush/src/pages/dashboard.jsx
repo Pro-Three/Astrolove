@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom'
+ 
+
 
 
 const sunsign = localStorage.getItem("sunsign")
@@ -15,29 +17,45 @@ const options = {
   }
 };
 
+const styles = {
+  button: {
+      width: '150px',
+      height: '35px',
+      color: 'white',
+      marginTop: '5px',
+      marginBottom: '5px',
+      padding: "auto"
+  }
+}
+
 const Dashboard = () => {
+  const [showhoro, setshowhoro] = useState(true);
+
     const Daily = () =>axios.request(options).then(function (response) {
-        console.log(response.data.description);
+      setshowhoro(!showhoro);
+     //const [horoscope, sethoroscope] = setState(response.data.description)
+     localStorage.setItem('horoscope', response.data.description);
+      console.log(response.data.description);
    }).catch(function (error) {
         console.error(error);
     });
-
+   const horoscope = localStorage.getItem('horoscope');
     return (
         <div className="container">
-            <div className="row #b0bec5 blue-grey lighten-3">
+            <div className="row grey lighten-3">
 
             <h3 className="col s12 m12 l12">Dashboard</h3>
-            
             <div className="col s12 m12 l12">
-            <Link to='/matches'>
-            <button className="newMatchesBtn right" id="newMatchesBtn">Find New Matches</button>
+            <Link to='/onlook'>
+            <button style= {styles.button} className="newMatchesBtn right waves-effect waves-light btn deep-purple lighten-1 btn-medium" id="newMatchesBtn">Find New Matches</button>
             </Link>
             </div>
             <div className="col s12 m12 l12">
-            <button className="dailyScope right" id="dailyScope" onClick={Daily}>Daily Horoscope</button>
+            <button style= {styles.button} className="dailyScope right waves-effect waves-light btn deep-purple lighten-1 btn-medium" id="dailyScope" onClick={Daily}>Daily Horoscope</button>
+            { !showhoro ? <h4 className="col s12 m12 l12">{horoscope}</h4> : "" }
             </div>
             <div className="col s12 m12 l12">
-            <button className="monthlyScope right" id="monthlyScope">Monthly</button>
+            <button style= {styles.button} className="monthlyScope right waves-effect waves-light btn deep-purple lighten-1 btn-medium" id="monthlyScope">Monthly</button>
             </div>
             </div>
         </div>

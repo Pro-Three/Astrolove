@@ -35,8 +35,12 @@ class AuthService {
   }
 
   logout() {
+    console.log(`User is now logged out!`)
     // Clear user token and profile data from localStorage
     localStorage.removeItem('id_token');
+    localStorage.removeItem('email');
+    localStorage.removeItem('sunsign');
+    
     // this will reload the page and reset the state of the application
     window.location.assign('/');
   }
