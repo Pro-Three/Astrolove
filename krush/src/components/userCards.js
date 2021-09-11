@@ -6,6 +6,20 @@ import userProfilePic from '../img/generic-background.jpeg'
 // SOURCE METHOD:  https://werxltd.com/wp/2010/05/13/javascript-implementation-of-javas-string-hashcode-method/
 // Single line, ES6 version implemented (below) credited to StackOverflow user 'deekshith'
 // StackOverflow link:  https://stackoverflow.com/a/34842797/16407707
+
+const styles = {
+    button: {
+        width: '150px',
+        height: '35px',
+        color: 'white',
+        marginTop: '10px',
+        marginBottom: '10px',
+        marginRight: '5px',
+        padding: "auto"
+    },
+}
+
+
 const hashCode = s => s.split('').reduce((a,b) => (((a << 5) - a) + b.charCodeAt(0))|0, 0) 
 
 const UserCard = ({ allUsers }) => {
@@ -40,7 +54,8 @@ const UserCard = ({ allUsers }) => {
                     </div>
                     <div className="card-action">
                         {/*TO DO:  make 'Like" button work correctly */}
-                        <a href="#">Like</a>
+                        <button className="waves-effect waves-light btn deep-purple lighten-1 btn-medium" style={styles.button} >Like</button>
+                        {/* <a href="#">Like</a> */}
                     </div>
                 </div>
             ))}
