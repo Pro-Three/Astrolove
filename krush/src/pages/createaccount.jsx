@@ -1,5 +1,5 @@
 import React,{ useState } from 'react';
-import Select from "materialize-css";
+// import Select from "materialize-css";
 import { Link } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
 import Auth from '../utils/auth';
@@ -9,7 +9,8 @@ import { ADD_USER } from '../utils/mutations';
 
 document.addEventListener('DOMContentLoaded', function() {
   var elems = document.querySelectorAll('select');
-  // var instances = Select.FormSelect.init(elems);
+  var instances = Select.FormSelect.init(elems);
+  console.log(instances)
 });
 
 
