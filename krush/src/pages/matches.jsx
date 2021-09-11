@@ -29,6 +29,7 @@ function MyImageComponent() {
 const Matches = () => {
     // const userEmail = localStorage.getItem('email')
     const { data, loading, error } = useQuery(QUERY_ALL_USERS);
+    console.log(error);
     const allUsers = data?.users || [];
     console.log('MATCHES - allUsers:  ', allUsers);
     const userEmail = localStorage.getItem('EMAIL');

@@ -1,6 +1,6 @@
 import React from 'react';
 import 'materialize-css';
-import { FaGithub} from "react-icons/fa";
+// import { FaGithub} from "react-icons/fa";
 
 const styles = {
 footer: {
