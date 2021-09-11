@@ -60,7 +60,7 @@ const Chats = () => {
     <li class="self">
         <div class="avatar"><img src="https://i.imgur.com/HYcn9xO.png" draggable="false" alt="done"/></div>
       <div class="msg">
-        <img src="https://i.imgur.com/QAROObc.jpg" draggable="false"/>
+        <img src="https://i.imgur.com/QAROObc.jpg" draggable="false" alt="done"/>
         <h6 style={{textDecoration: 'underline'}}>William</h6>
 
         <p>That's super accurate bro no lie</p>
