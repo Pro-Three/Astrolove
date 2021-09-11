@@ -1,6 +1,6 @@
 // import { useSubscription } from '@apollo/client';
-import React, { Suspense } from 'react';
-import { useImage } from 'react-image';
+import React from 'react';
+// import { useImage } from 'react-image';
 import UserCard from '../components/userCards';
 import { useQuery } from '@apollo/client';
 import { QUERY_ALL_USERS } from '../utils/queries';
@@ -16,15 +16,18 @@ import { QUERY_ALL_USERS } from '../utils/queries';
 //         marginRight: '5px',
 //         padding: "auto"
 //     },
+//     otherList: {
+//         fontSize: '150%'
+//     }
 // }
 
-function MyImageComponent() {
-    const {src} = useImage({
-      srcList: 'https://cdn.theatlantic.com/media/mt/science/cat_caviar.jpg',
-    })
+// function MyImageComponent() {
+//     const {src} = useImage({
+//       srcList: 'https://cdn.theatlantic.com/media/mt/science/cat_caviar.jpg',
+//     })
 
-    return <img src={src} alt="nonsense" />
-}
+//     return <img src={src} />
+// }
 
 const Matches = () => {
     // const userEmail = localStorage.getItem('email')
@@ -34,14 +37,14 @@ const Matches = () => {
     console.log('MATCHES - allUsers:  ', allUsers);
 
     return (
-        <div className="container">
+        <div className="container z-depth-2">
             <div className="row grey lighten-3">
-                <h3 className="center">Match Name</h3>
+                {/* <h3 className="center">Match Name</h3>
                 <div className="col s6 m6 l6">
                     <Suspense fallback={<div>Loading</div>}>
                         <MyImageComponent />
                     </Suspense>
-                </div>
+                </div> */}
                 <div>
                     {/* {usersData.map((data) => {
                         <UserCard />
@@ -65,7 +68,7 @@ const Matches = () => {
                     <h5 className="center">90%</h5>
                 </div>
                 <div className="col s3 m3 l3">
-                    <p className="paragraphs">Something about the people like profiles, likes, etc.</p>
+                    <p className="paragraphs">It was a scrape that he hardly noticed. Sure, there was a bit of blood but it was minor compared to most of the other cuts and bruises he acquired on his adventures. There was no way he could know that the rock that produced the cut had alien genetic material on it that was now racing through his bloodstream. He felt perfectly normal and continued his adventure with no knowledge of what was about to happen to him.</p>
                 </div>
                 
                 <div className="col s12 m12 l12 center">
