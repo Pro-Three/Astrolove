@@ -3,7 +3,7 @@ import React, { Suspense } from 'react';
 import { useImage } from 'react-image';
 import UserCard from '../components/userCards';
 import { useQuery } from '@apollo/client';
-import { QUERY_ALL_USERS } from '../utils/queries';
+import { QUERY_ALL_USERS, QUERY_USER } from '../utils/queries';
 
 
 const styles = {
@@ -31,6 +31,12 @@ const Matches = () => {
     const { data, loading, error } = useQuery(QUERY_ALL_USERS);
     const allUsers = data?.users || [];
     console.log('MATCHES - allUsers:  ', allUsers);
+    const userEmail = localStorage.getItem('EMAIL');
+    const { data: currentUId, loading: currentUserQuery, error: currentUserQueryError } = useQuery(QUERY_USER, {
+        variables: { email: userEmail }
+    });
+    console.log('MATCHES - currentUId', currentUId?.user._id)
+    localStorage.setItem('id', currentUId?.user._id);
 
     return (
         <div className="container">
@@ -52,6 +58,7 @@ const Matches = () => {
                         <UserCard
                         // thoughts={thoughts}
                         allUsers={allUsers}
+
                     />
                     )}
                 </div>
