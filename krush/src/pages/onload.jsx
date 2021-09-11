@@ -1,15 +1,15 @@
 import React from 'react';
 
-const styles = {
-    button: {
-        width: '150px',
-        height: '35px',
-        color: 'white',
-        marginTop: '10px',
-        marginBottom: '10px',
-        padding: "auto"
-    }
-}
+// const styles = {
+//     button: {
+//         width: '150px',
+//         height: '35px',
+//         color: 'white',
+//         marginTop: '10px',
+//         marginBottom: '10px',
+//         padding: "auto"
+//     }
+// }
 
 
 const OnLoad = () => {

@@ -1,4 +1,4 @@
-import { useSubscription } from '@apollo/client';
+// import { useSubscription } from '@apollo/client';
 import React, { Suspense } from 'react';
 import { useImage } from 'react-image';
 import UserCard from '../components/userCards';
@@ -6,29 +6,29 @@ import { useQuery } from '@apollo/client';
 import { QUERY_ALL_USERS } from '../utils/queries';
 
 
-const styles = {
-    button: {
-        width: '150px',
-        height: '35px',
-        color: 'white',
-        marginTop: '10px',
-        marginBottom: '10px',
-        marginRight: '5px',
-        padding: "auto"
-    },
-}
+// const styles = {
+//     button: {
+//         width: '150px',
+//         height: '35px',
+//         color: 'white',
+//         marginTop: '10px',
+//         marginBottom: '10px',
+//         marginRight: '5px',
+//         padding: "auto"
+//     },
+// }
 
 function MyImageComponent() {
     const {src} = useImage({
       srcList: 'https://cdn.theatlantic.com/media/mt/science/cat_caviar.jpg',
     })
 
-    return <img src={src} />
+    return <img src={src} alt="nonsense" />
 }
 
 const Matches = () => {
     // const userEmail = localStorage.getItem('email')
-    const { data, loading, error } = useQuery(QUERY_ALL_USERS);
+    const { data, loading } = useQuery(QUERY_ALL_USERS);
     const allUsers = data?.users || [];
     console.log('MATCHES - allUsers:  ', allUsers);
 
