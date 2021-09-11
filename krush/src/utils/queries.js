@@ -12,7 +12,6 @@ export const QUERY_USER = gql`
       gender
       desiredRelationshipPref
       aboutMe
-      likes
     }
   }
 `;

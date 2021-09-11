@@ -52,6 +52,7 @@ const Matches = () => {
                         <UserCard
                         // thoughts={thoughts}
                         allUsers={allUsers}
+
                     />
                     )}
                 </div>

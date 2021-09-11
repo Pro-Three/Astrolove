@@ -1,5 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import 'materialize-css';
+import { useQuery } from '@apollo/client';
+import { QUERY_USER } from '../utils/queries';
 import userProfilePic from '../img/generic-background.jpeg'
 
 // Temporary Hashing for list items to avoid package installation (at the moment)
@@ -8,7 +10,36 @@ import userProfilePic from '../img/generic-background.jpeg'
 // StackOverflow link:  https://stackoverflow.com/a/34842797/16407707
 const hashCode = s => s.split('').reduce((a,b) => (((a << 5) - a) + b.charCodeAt(0))|0, 0) 
 
+
 const UserCard = ({ allUsers }) => {
+    const userEmail = localStorage.getItem('EMAIL');
+    const { data, loading, error } = useQuery(QUERY_USER, {
+        variables: { email: userEmail }
+    });
+    localStorage.setItem('id', data.user.id);
+    // console.log('UserCard - localStorage:  ', localStorage.getItem('EMAIL'))
+    // console.log('UserCard - data.user:  ', data)
+    // setCurrentUserId(currentUserIdState)
+
+    const handleUpdateLikes = async (event) => {
+        event.preventDefault();
+        console.log('UserCard - data.user.id:  ', data?.user.id)
+        // setCurrentUserId(data?.user.id)
+        // setLikes(event.target.id);
+        console.log('UserCard - event.target.value:  ', event.target.name)
+        // setLikes(likeBucket => [...likeBucket, event.target.value])
+
+        // this.seLikes
+        // console.log('UserCard - setLikes:  ', likeBucket)
+        // if (!data.user.id) {
+        //     return;
+        // }
+        // const newLike = [...likeBucket, event.target.value]
+        // console.log('UseCard - newLike:  ', newLike)
+
+    
+    } 
+
     if (!allUsers) {
         return (
             <h3>NO USERS YET</h3>
@@ -40,7 +71,7 @@ const UserCard = ({ allUsers }) => {
                     </div>
                     <div className="card-action">
                         {/*TO DO:  make 'Like" button work correctly */}
-                        <a href="#">Like</a>
+                        <a href="#" name={allUsers._id} onClick={handleUpdateLikes}>Like</a>
                     </div>
                 </div>
             ))}
