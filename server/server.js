@@ -20,13 +20,13 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 // if we're in production, serve client/build as static assets
-if (process.env.NODE_ENV === "production") {
-  app.use(express.static(path.join(__dirname, "krush/build")));
+if (process.env.NODE_ENV === 'production') {
+  app.use(express.static(path.join(__dirname, '../krush/build')));
 }
   
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, "krush/build", "index.html"));
-});
+  res.sendFile(path.join(__dirname, '../krush/public/index.html'));
+}); 
 
 app.use((req, res, next) => {
   const error = new Error("Not found");
